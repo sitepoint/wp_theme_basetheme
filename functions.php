@@ -230,7 +230,7 @@ if ( ! function_exists( 'sitepoint_widgets_init' ) ) {
 		register_sidebar( array(
 				'name' => esc_html__( 'Main Sidebar', 'sitepoint' ),
 				'id' => 'sidebar-main',
-				'description' => esc_html__( 'Appears in the sidebar on posts and pages except the optional Front Page template, which has its own widgets', 'sitepoint' ),
+				'description' => esc_html__( 'Appears in the sidebar on all posts and pages', 'sitepoint' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
 				'before_title' => '<h3 class="widget-title">',
