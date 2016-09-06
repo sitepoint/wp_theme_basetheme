@@ -1,13 +1,13 @@
 /*
 Theme Name: Sitepoint
-Theme URI: http://sitepoint.com
+Theme URI: http://sitepoint.com/Sitepoint-base-theme
 Author: Sitepoint
-Author URI: http://sitepoint.com/
+Author URI: http://sitepoint.com
 Description: The Sitepoint base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The Sitepoint base theme is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder and the SiteOrigin Page Builder.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Text Domain: sitepoint
 */
 
@@ -982,7 +982,15 @@ article.sticky .featured-post {
 }
 
 .more-link {
+	color: #339bcb;
 	text-decoration: none;
+}
+
+.more-link:hover,
+.more-link:active,
+.more-link:visited {
+	outline: 0;
+	color: #339bcb;
 }
 
 .post-edit-link {
