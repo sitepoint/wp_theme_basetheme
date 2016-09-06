@@ -901,7 +901,7 @@ if ( ! function_exists( 'sitepoint_woocommerce_after_main_content' ) ) {
 add_action( 'woocommerce_after_main_content', 'sitepoint_woocommerce_after_main_content', 10 );
 
 /**
- * Remove the sidebar from the WooCommerce templates
+ * Remove the sidebar from the WooCommerce product page
  *
  * @since Sitepoint 1.0
  *
