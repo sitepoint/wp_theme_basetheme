@@ -16,7 +16,7 @@ The Sitepoint base theme is a clean, fast and simple platform for creating beaut
 
 If you do decide to use a child theme with Sitepoint, there's no need to use CSS @import or even enqueue the parent stylesheet. Sitepoint will automatically enqueue the parent stylesheet for you. Cool eh!
 
-Sitepoint's base is a fluid, responsive grid based on percentages. It uses Normalize to make sure that browsers render all elements more consistently and Mordernizr for detecting HTML5 and CSS3 browser capabilities along with some default stylings from HTML5 Boilerplate. It also incorporates the gorgeous [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icon font by Dave Gandy.
+Sitepoint's base is a fluid, responsive grid based on percentages. It uses Normalize to make sure that browsers render all elements more consistently and Modernizr for detecting HTML5 and CSS3 browser capabilities along with some default stylings from HTML5 Boilerplate. It also incorporates the gorgeous [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icon font by Dave Gandy.
 
 The main navigation uses the standard WordPress menu. Support for dropdown menus is included by default. If you'd like to envoke a button toggle for the main navigation menu on small screens, simply uncomment the two lines from the sitepoint_scripts_styles() function within functions.php to register and enqueue the necessary javascript file.
 
