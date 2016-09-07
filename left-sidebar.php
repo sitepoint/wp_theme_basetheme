@@ -14,7 +14,7 @@ get_header(); ?>
 	<div id="primary" class="grid-container site-content" role="main">
 
 		<?php get_sidebar(); ?>
-		<div class="grid-70">
+		<div class="grid-70 tablet-grid-70">
 
 			<?php if ( have_posts() ) : ?>
 

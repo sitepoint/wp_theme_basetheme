@@ -22,7 +22,7 @@ if ( $footerSidebars > 0 ) { ?>
 	<footer class="site-footer grid-container" role="contentinfo">
 		<?php
 		// Work out the container class name based on the number of active footer sidebars
-		$containerClass = "grid-" . intval( 100 / $footerSidebars ) . " mobile-grid-100";
+		$containerClass = "grid-" . intval( 100 / $footerSidebars ) . " tablet-grid-" . intval( 100 / $footerSidebars ) . " mobile-grid-100";
 
 		// Display the active footer sidebars
 		for ( $x=1; $x<=4; $x++ ) {

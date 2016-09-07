@@ -17,7 +17,7 @@ get_header(); ?>
 <div id="maincontentcontainer">
 	<div id="primary" class="grid-container site-content" role="main">
 
-		<div class="grid-70">
+		<div class="grid-70 tablet-grid-70">
 
 			<?php if ( have_posts() ) : ?>
 
