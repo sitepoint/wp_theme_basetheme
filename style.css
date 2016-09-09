@@ -775,39 +775,6 @@ select {
 	margin-bottom: 0;
 }
 
-/* Social Media icons */
-.social-media-icons {
-	float: right;
-	height: auto;
-}
-
-.social-media-icons ul {
-	list-style: none;
-	margin: .5em 0 0 0;
-	padding: 0;
-}
-
-.social-media-icons li {
-	display: inline-block;
-	margin: 0.1em 0 0 0.6em;
-	font-size: 0.6rem;
-	text-align: left;
-}
-
-.social-media-icons a {
-	color: #3a3a3a;
-	text-decoration: none;
-}
-
-.social-media-icons a:visited {
-	color: #3a3a3a;
-}
-
-.social-media-icons a:hover, .social-media-icons a:active {
-	color: #339bcb;
-}
-
-
 /* ==========================================================================
    Main Content
    ========================================================================== */
@@ -1911,6 +1878,12 @@ li span.dots {
 
 .main-small-navigation .nav-menu {
 	display: none;
+	font-size: 16px;
+}
+
+.main-small-navigation ul a {
+	padding: 5px 0;
+	padding: .3125rem 0; /* Padding around each top level menu option (if needed) */
 }
 
 /* ==========================================================================
@@ -2108,34 +2081,13 @@ h1.page-title {
 	}
 }
 
-@media only screen and (max-width: 980px) {
-	.main-navigation {
-		margin: 38px 0 0 0;
-		margin: 2.375rem 0 0 0;
-	}
-}
-
-@media only screen and (max-width: 900px) {
-	.main-navigation {
-		margin: 32px 0 0 0;
-		margin: 2rem 0 0 0;
-	}
-}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 767px) {
 	header .main-navigation {
 		margin-top: 0;
 		float: none;
 	}
 	.main-navigation .nav-menu > li:first-child {
 		margin-left: 0;
-	}
-	.social-media-icons {
-		float: none;
-		text-align: left;
-	}
-	.social-media-icons li {
-		margin: 0.1em 0.5em 0 0;
 	}
 }
 
@@ -2151,7 +2103,7 @@ h1.page-title {
 
 
 /*  Adjust the menu at less than 520px */
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 519px) {
 	.site-title h1 {
 		text-align: center;
 	}
@@ -2184,9 +2136,6 @@ h1.page-title {
 		color: #fff; /* Nav bar dropdown link color */
 		background-color: #3a3a3a;  /* Nav bar dropdown background color */
 		width: 100%; /* Nav bar dropdown width */
-	}
-	.social-media-icons {
-		text-align: center;
 	}
 }
 
