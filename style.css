@@ -3,7 +3,7 @@ Theme Name: Sitepoint
 Theme URI: http://sitepoint.com/Sitepoint-base-theme
 Author: Sitepoint
 Author URI: http://sitepoint.com
-Description: The Sitepoint base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The Sitepoint base theme is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder and the SiteOrigin Page Builder.
+Description: The Sitepoint base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The Sitepoint base theme is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder, SiteOrigin Page Builder and the Elementor Page Builder.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -2059,6 +2059,12 @@ h1.page-title {
 .page-template-page-builderblank.siteorigin-panels .panel-grid {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
+}
+
+/* Elementor Page Builder - Ensure the grid only extends 100% */
+.page-template-page-builderfullwidth.elementor-page .elementor-section.elementor-section-boxed > .elementor-container,
+.page-template-page-builderblank.elementor-page .elementor-section.elementor-section-boxed > .elementor-container {
+	max-width: 1180px;
 }
 
 /* ==========================================================================
