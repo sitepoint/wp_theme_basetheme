@@ -42,11 +42,11 @@
 	<div id="headercontainer">
 
 		<header id="masthead" class="grid-container site-header" role="banner">
-			<div class="grid-40 site-title">
+			<div class="grid-40 tablet-grid-40 site-title">
 				<?php sitepoint_the_custom_logo() ?>
 			</div> <!-- /.grid-40.site-title -->
 
-			<div class="grid-60">
+			<div class="grid-60 tablet-grid-60">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'sitepoint' ); ?></h3>
 					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'sitepoint' ); ?>"><?php esc_html_e( 'Skip to content', 'sitepoint' ); ?></a></div>
