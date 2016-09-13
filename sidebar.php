@@ -6,7 +6,7 @@
  * @since Sitepoint 1.0
  */
 ?>
-	<div class="grid-30 mobile-grid-100">
+	<div class="grid-30 tablet-grid-30 mobile-grid-100">
 
 		<div id="secondary" class="widget-area" role="complementary">
 			<?php
