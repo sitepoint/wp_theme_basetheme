@@ -471,10 +471,24 @@ if ( ! function_exists( 'sitepoint_content_nav' ) ) {
 					'current' => max( 1, get_query_var( 'paged' ) ),
 					'total' => $wp_query->max_num_pages,
 					'type' => 'list',
-					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left" aria-hidden="true"></i> Previous', 'sitepoint' ), array( 'i' => array(
-						'class' => array(), 'aria-hidden' => array() ) ) ),
-					'next_text' => wp_kses( __( 'Next <i class="fa fa-angle-right" aria-hidden="true"></i>', 'sitepoint' ), array( 'i' => array(
-						'class' => array(), 'aria-hidden' => array() ) ) )
+					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left" aria-hidden="true"></i> <span>Previous</span>', 'sitepoint' ),
+						array(
+							'i' => array(
+								'class' => array(),
+								'aria-hidden' => array()
+							),
+							'span' => array()
+						)
+					),
+					'next_text' => wp_kses( __( '<span>Next</span> <i class="fa fa-angle-right" aria-hidden="true"></i>', 'sitepoint' ),
+						array(
+							'i' => array(
+								'class' => array(),
+								'aria-hidden' => array()
+							),
+							'span' => array()
+						)
+					)
 				) ); ?>
 
 			<?php } ?>
@@ -645,7 +659,7 @@ if ( ! function_exists( 'sitepoint_posted_on' ) ) {
 		}
 
 		// Translators: 1: Icon 2: Permalink 3: Post date and time 4: Publish date in ISO format 5: Post date
-		$date = sprintf( '<i class="fa %1$s" aria-hidden="true"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a>',
+		$date = sprintf( '<span class="publish-date"><i class="fa %1$s" aria-hidden="true"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a></span>',
 			$post_icon,
 			esc_url( get_permalink() ),
 			sprintf( esc_html__( '%1$s @ %2$s', 'sitepoint' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
@@ -654,7 +668,7 @@ if ( ! function_exists( 'sitepoint_posted_on' ) ) {
 		);
 
 		// Translators: 1: Date link 2: Author link 3: Categories 4: No. of Comments
-		$author = sprintf( '<i class="fa fa-pencil" aria-hidden="true"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
+		$author = sprintf( '<span class="publish-author"><i class="fa fa-pencil" aria-hidden="true"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'sitepoint' ), get_the_author() ) ),
 			get_the_author()
