@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sitepoint\n"
-"POT-Creation-Date: 2016-09-05 17:40+1000\n"
-"PO-Revision-Date: 2016-09-05 17:40+1000\n"
+"POT-Creation-Date: 2016-09-13 16:52+1000\n"
+"PO-Revision-Date: 2016-09-13 16:52+1000\n"
 "Last-Translator: Anthony Hortin <support@maddisondesigns.com>\n"
 "Language-Team: Maddison Designs <support@maddisondesigns.com>\n"
 "Language: english\n"
@@ -75,7 +75,7 @@ msgstr ""
 #: ../content-aside.php:15 ../content-audio.php:24 ../content-chat.php:15
 #: ../content-gallery.php:23 ../content-image.php:15 ../content-link.php:15
 #: ../content-quote.php:16 ../content-status.php:15 ../content-video.php:23
-#: ../content.php:42 ../content.php:46 ../functions.php:755
+#: ../content.php:47 ../content.php:51 ../functions.php:769
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -84,7 +84,7 @@ msgstr ""
 #: ../content-gallery.php:28 ../content-image.php:20 ../content-link.php:20
 #: ../content-page.php:22 ../content-postarchives.php:33
 #: ../content-quote.php:23 ../content-status.php:19 ../content-video.php:28
-#: ../content.php:52
+#: ../content.php:57
 msgid "Pages:"
 msgstr ""
 
@@ -92,12 +92,12 @@ msgstr ""
 #: ../content-gallery.php:40 ../content-image.php:32 ../content-link.php:32
 #: ../content-page.php:29 ../content-postarchives.php:36
 #: ../content-quote.php:35 ../content-status.php:31 ../content-video.php:40
-#: ../content.php:65 ../functions.php:544
+#: ../content.php:70 ../functions.php:558
 msgid "Edit"
 msgstr ""
 
 #: ../content-audio.php:17 ../content-gallery.php:17 ../content-video.php:17
-#: ../content.php:22 ../content.php:27
+#: ../content.php:22 ../content.php:31
 msgid "Permalink to "
 msgstr ""
 
@@ -128,7 +128,7 @@ msgid "no-subset"
 msgstr ""
 
 #: ../functions.php:173
-msgctxt "Ubuntu font: on or off"
+msgctxt "Dosis font: on or off"
 msgid "on"
 msgstr ""
 
@@ -137,9 +137,7 @@ msgid "Main Sidebar"
 msgstr ""
 
 #: ../functions.php:233
-msgid ""
-"Appears in the sidebar on posts and pages except the optional Front Page "
-"template, which has its own widgets"
+msgid "Appears in the sidebar on all posts and pages"
 msgstr ""
 
 #: ../functions.php:241
@@ -214,121 +212,123 @@ msgid "<i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>"
 msgstr ""
 
 #: ../functions.php:474
-msgid "<i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i> Previous"
+msgid ""
+"<i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i> <span>Previous</span>"
 msgstr ""
 
-#: ../functions.php:476
-msgid "Next <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>"
+#: ../functions.php:483
+msgid ""
+"<span>Next</span> <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>"
 msgstr ""
 
-#: ../functions.php:512
+#: ../functions.php:526
 msgid "Pingback:"
 msgstr ""
 
-#: ../functions.php:512
+#: ../functions.php:526
 msgid "(Edit)"
 msgstr ""
 
-#: ../functions.php:527
+#: ../functions.php:541
 msgid "Post author"
 msgstr ""
 
-#: ../functions.php:530 ../functions.php:651
+#: ../functions.php:544 ../functions.php:665
 #, php-format
 msgid "%1$s @ %2$s"
 msgstr ""
 
-#: ../functions.php:533
+#: ../functions.php:547
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../functions.php:539
+#: ../functions.php:553
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../functions.php:548
+#: ../functions.php:562
 msgid "Reply <span>&darr;</span>"
 msgstr ""
 
-#: ../functions.php:572
+#: ../functions.php:586
 msgid "Name"
 msgstr ""
 
-#: ../functions.php:574
+#: ../functions.php:588
 msgid "Email"
 msgstr ""
 
-#: ../functions.php:576
+#: ../functions.php:590
 msgid "Website"
 msgstr ""
 
-#: ../functions.php:596
+#: ../functions.php:610
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: ../functions.php:659
+#: ../functions.php:673
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: ../functions.php:664 ../functions.php:699
+#: ../functions.php:678 ../functions.php:713
 msgid " "
 msgstr ""
 
-#: ../functions.php:669
+#: ../functions.php:683
 msgid "Comment on "
 msgstr ""
 
-#: ../functions.php:670
+#: ../functions.php:684
 #, php-format
 msgid "%1$s Comment"
 msgid_plural "%1$s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../functions.php:670
+#: ../functions.php:684
 msgid "No Comments"
 msgstr ""
 
-#: ../functions.php:674
+#: ../functions.php:688
 #, php-format
 msgid ""
 "<div class=\"header-meta\">%1$s%2$s<span class=\"post-categories\">%3$s</"
 "span>%4$s</div>"
 msgstr ""
 
-#: ../functions.php:704
+#: ../functions.php:718
 #, php-format
 msgid "<i class=\"fa fa-tag\" aria-hidden=\"true\"></i> %1$s"
 msgstr ""
 
-#: ../functions.php:755
+#: ../functions.php:769
 msgid "Continue reading"
 msgstr ""
 
-#: ../functions.php:793
+#: ../functions.php:807
 msgid "Proudly powered by"
 msgstr ""
 
-#: ../functions.php:794
+#: ../functions.php:808
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: ../functions.php:795
+#: ../functions.php:809
 msgid "Semantic Personal Publishing Platform"
 msgstr ""
 
-#: ../functions.php:796
+#: ../functions.php:810
 msgid "WordPress"
 msgstr ""
 
-#: ../functions.php:955
+#: ../functions.php:956
 msgid "<i class=\"fa fa-angle-left\"></i> Previous"
 msgstr ""
 
-#: ../functions.php:957
+#: ../functions.php:958
 msgid "Next <i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
