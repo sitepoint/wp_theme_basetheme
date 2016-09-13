@@ -2071,7 +2071,6 @@ h1.page-title {
    Media Queries
    ========================================================================== */
 
-/*  Breakpoints are set based on the design, not based on device sizes */
 @media only screen and (max-width: 1100px) {
 	.site-title a {
 		font-size: 52px;
@@ -2095,6 +2094,42 @@ h1.page-title {
 	.main-navigation .nav-menu > li:first-child {
 		margin-left: 0;
 	}
+	.widget-area {
+		margin-top: 32px;
+		margin-top: 2rem;
+	}
+	.header-meta {
+		margin-bottom: 16px;
+		margin-bottom: 1rem;
+	}
+	.header-meta a {
+		padding: 12px 12px 12px 0;
+		padding: .75rem .75rem .75rem 0;
+	}
+	.header-meta .post-categories a {
+		padding: 5px;
+		padding: .3125rem;
+	}
+	ul.page-numbers {
+		line-height: 3;
+	}
+	li a.page-numbers,
+	li span.page-numbers {
+		padding: 12px 10px;
+		padding: .75rem .625rem;
+	}
+	.more-link {
+		padding: 12px 12px 10px 0;
+		padding: .75rem .75rem .625rem 0;
+	}
+	.widget-area a {
+		padding: 12px 12px 10px 0;
+		padding: .75rem .75rem .625rem 0;
+	}
+	.widget-area li {
+		margin: 12px 12px 10px 0;
+		margin: .75rem .75rem .625rem 0;
+	}
 }
 
 @media only screen and (max-width: 650px) {
@@ -2107,8 +2142,6 @@ h1.page-title {
 	}
 }
 
-
-/*  Adjust the menu at less than 520px */
 @media only screen and (max-width: 519px) {
 	.site-title h1 {
 		text-align: center;
@@ -2142,6 +2175,30 @@ h1.page-title {
 		color: #fff; /* Nav bar dropdown link color */
 		background-color: #3a3a3a;  /* Nav bar dropdown background color */
 		width: 100%; /* Nav bar dropdown width */
+	}
+	.header-meta .publish-date,
+	.header-meta .publish-author,
+	.header-meta .post-categories,
+	.header-meta .comments-link {
+		float: left;
+		margin: 8px 0;
+		margin: .5rem 0;
+	}
+	.header-meta .post-categories {
+		margin-right: 8px;
+		margin-right: .5rem;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	li a.prev span,
+	li a.next span {
+		display: none;
+	}
+	li a.prev i,
+	li a.next i {
+		font-size: 24px;
+		font-size: 1.5rem;
 	}
 }
 
