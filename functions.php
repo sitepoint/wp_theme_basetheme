@@ -36,7 +36,7 @@ if ( ! function_exists( 'sitepoint_setup' ) ) {
 		 * If you're building a theme based on Sitepoint, use a find and replace
 		 * to change 'sitepoint' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'sitepoint', trailingslashit( get_template_directory() ) . 'languages' );
+		load_theme_textdomain( 'sitepoint-base-theme', trailingslashit( get_template_directory() ) . 'languages' );
 
 		// This theme styles the visual editor with editor-style.css to match the theme style.
 		add_editor_style();
