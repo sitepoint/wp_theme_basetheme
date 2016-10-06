@@ -1,6 +1,6 @@
 <wpml-config>
 	<admin-texts>
-		<key name="sitepoint">
+		<key name="sitepoint-base-theme">
 			<key name="footer_content" />
 		</key>
 	</admin-texts>
