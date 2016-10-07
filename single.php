@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package Sitepoint
- * @since Sitepoint 1.0
+ * @package Sitepoint Base Theme
+ * @since Sitepoint Base Theme 1.0
  */
 
 get_header(); ?>
@@ -24,7 +24,7 @@ get_header(); ?>
 					}
 					?>
 
-					<?php sitepoint_content_nav( 'nav-below' ); ?>
+					<?php sitepoint-base-theme_content_nav( 'nav-below' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 

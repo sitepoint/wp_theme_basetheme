@@ -2,8 +2,8 @@
 /**
  * The template for displaying an archive page for Categories.
  *
- * @package Sitepoint
- * @since Sitepoint 1.0
+ * @package Sitepoint Base Theme
+ * @since Sitepoint Base Theme 1.0
  */
 
 get_header(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
 				?>
 
 				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'sitepoint' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
+					<h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'sitepoint-base-theme' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
 				</header><!-- .archive-header -->
 
 				<?php // If a user has filled out their description, show a bio on their entries.
@@ -40,7 +40,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 
-				<?php sitepoint_content_nav( 'nav-below' ); ?>
+				<?php sitepoint-base-theme_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

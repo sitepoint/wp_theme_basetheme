@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="wrapper">
  *
- * @package Sitepoint
- * @since Sitepoint 1.3.3
+ * @package Sitepoint Base Theme
+ * @since Sitepoint Base Theme 1.3.3
  */
 ?><!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
