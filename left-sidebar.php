@@ -23,7 +23,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 				<?php endwhile; ?>
 
-				<?php sitepoint-base-theme_content_nav( 'nav-below' ); ?>
+				<?php sitepointbasetheme_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

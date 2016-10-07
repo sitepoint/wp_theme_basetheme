@@ -9,7 +9,7 @@
 
 <div class="author-info">
 	<div class="author-avatar">
-		<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'sitepoint-base-theme_author_bio_avatar_size', 68 ) ); ?>
+		<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'sitepointbasetheme_author_bio_avatar_size', 68 ) ); ?>
 	</div> <!-- /.author-avatar -->
 	<div class="author-description">
 		<h2><?php printf( esc_html__( 'About %s', 'sitepoint-base-theme' ), get_the_author() ); ?></h2>
