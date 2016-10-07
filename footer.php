@@ -6,19 +6,19 @@
  * There are also four footer widgets displayed. These will be displayed from
  * one to four columns, depending on how many widgets are active.
  *
- * @package Sitepoint
- * @since Sitepoint 1.0
+ * @package Sitepoint Base Theme
+ * @since Sitepoint Base Theme 1.0
  */
 ?>
 
-	<?php	do_action( 'sitepoint_after_woocommerce' ); ?>
+	<?php	do_action( 'sitepoint-base-theme_after_woocommerce' ); ?>
 	<div id="footercontainer">
 
 		<?php get_sidebar( 'footer' ); ?>
 
 		<div class="grid-container smallprint">
 			<div class="grid-100">
-				<?php echo sitepoint_get_credits() ?>
+				<?php echo sitepoint-base-theme_get_credits() ?>
 			</div> <!-- /.grid-100 -->
 		</div> <!-- /.grid-container.smallprint -->
 

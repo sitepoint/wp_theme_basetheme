@@ -4,8 +4,8 @@
  *
  * Description: Displays a browser full-width page for use with page builders like Visual Composer, Beaver Builder and the Divi Builder.
  *
- * @package Sitepoint
- * @since Sitepoint 1.0
+ * @package Sitepoint Base Theme
+ * @since Sitepoint Base Theme 1.0
  */
 
 get_header(); ?>

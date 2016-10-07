@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Sitepoint
- * @since Sitepoint 1.0
+ * @package Sitepoint Base Theme
+ * @since Sitepoint Base Theme 1.0
  */
 
 get_header(); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content ?>
 				<?php endwhile; ?>
 
-				<?php sitepoint_content_nav( 'nav-below' ); ?>
+				<?php sitepoint-base-theme_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

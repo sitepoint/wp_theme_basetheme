@@ -2,8 +2,8 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package Sitepoint
- * @since Sitepoint 1.0
+ * @package Sitepoint Base Theme
+ * @since Sitepoint Base Theme 1.0
  */
 ?>
 	<div class="grid-30 tablet-grid-30 mobile-grid-100">
