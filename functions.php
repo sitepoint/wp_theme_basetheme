@@ -26,8 +26,8 @@ if ( ! isset( $content_width ) ) {
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_setup' ) ) {
-	function sitepoint-base-theme_setup() {
+if ( ! function_exists( 'sitepointbasetheme_setup' ) ) {
+	function sitepointbasetheme_setup() {
 		global $content_width;
 
 		/**
@@ -123,7 +123,7 @@ if ( ! function_exists( 'sitepoint-base-theme_setup' ) ) {
 		add_theme_support( 'woocommerce' );
 	}
 }
-add_action( 'after_setup_theme', 'sitepoint-base-theme_setup' );
+add_action( 'after_setup_theme', 'sitepointbasetheme_setup' );
 
 /**
  * Enable backwards compatability for title-tag support
@@ -133,10 +133,10 @@ add_action( 'after_setup_theme', 'sitepoint-base-theme_setup' );
  * @return void
  */
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
-	function sitepoint-base-theme_slug_render_title() { ?>
+	function sitepointbasetheme_slug_render_title() { ?>
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<?php }
-	add_action( 'wp_head', 'sitepoint-base-theme_slug_render_title' );
+	add_action( 'wp_head', 'sitepointbasetheme_slug_render_title' );
 }
 
 /**
@@ -148,8 +148,8 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
  *
  * @return string Font stylesheet or empty string if disabled.
  */
-if ( ! function_exists( 'sitepoint-base-theme_fonts_url' ) ) {
-	function sitepoint-base-theme_fonts_url() {
+if ( ! function_exists( 'sitepointbasetheme_fonts_url' ) ) {
+	function sitepointbasetheme_fonts_url() {
 		$fonts_url = '';
 		$subsets = 'latin';
 
@@ -201,8 +201,8 @@ if ( ! function_exists( 'sitepoint-base-theme_fonts_url' ) ) {
  * @param string $mce_css CSS path to load in TinyMCE.
  * @return string The filtered CSS paths list.
  */
-function sitepoint-base-theme_mce_css( $mce_css ) {
-	$fonts_url = sitepoint-base-theme_fonts_url();
+function sitepointbasetheme_mce_css( $mce_css ) {
+	$fonts_url = sitepointbasetheme_fonts_url();
 
 	if ( empty( $fonts_url ) ) {
 		return $mce_css;
@@ -216,7 +216,7 @@ function sitepoint-base-theme_mce_css( $mce_css ) {
 
 	return $mce_css;
 }
-add_filter( 'mce_css', 'sitepoint-base-theme_mce_css' );
+add_filter( 'mce_css', 'sitepointbasetheme_mce_css' );
 
 /**
  * Register widgetized areas
@@ -225,8 +225,8 @@ add_filter( 'mce_css', 'sitepoint-base-theme_mce_css' );
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_widgets_init' ) ) {
-	function sitepoint-base-theme_widgets_init() {
+if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
+	function sitepointbasetheme_widgets_init() {
 		register_sidebar( array(
 				'name' => esc_html__( 'Main Sidebar', 'sitepoint-base-theme' ),
 				'id' => 'sidebar-main',
@@ -308,7 +308,7 @@ if ( ! function_exists( 'sitepoint-base-theme_widgets_init' ) ) {
 			) );
 	}
 }
-add_action( 'widgets_init', 'sitepoint-base-theme_widgets_init' );
+add_action( 'widgets_init', 'sitepointbasetheme_widgets_init' );
 
 /**
  * Enqueue scripts and styles
@@ -317,8 +317,8 @@ add_action( 'widgets_init', 'sitepoint-base-theme_widgets_init' );
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_scripts_styles' ) ) {
-	function sitepoint-base-theme_scripts_styles() {
+if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
+	function sitepointbasetheme_scripts_styles() {
 
 		/**
 		 * Register and enqueue our stylesheets
@@ -346,7 +346,7 @@ if ( ! function_exists( 'sitepoint-base-theme_scripts_styles' ) ) {
 		 * }
 		 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
 		 */
-		$fonts_url = sitepoint-base-theme_fonts_url();
+		$fonts_url = sitepointbasetheme_fonts_url();
 		if ( !empty( $fonts_url ) ) {
 			wp_enqueue_style( 'sitepoint-fonts', esc_url_raw( $fonts_url ), array(), null );
 		}
@@ -394,7 +394,7 @@ if ( ! function_exists( 'sitepoint-base-theme_scripts_styles' ) ) {
 
 	}
 }
-add_action( 'wp_enqueue_scripts', 'sitepoint-base-theme_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'sitepointbasetheme_scripts_styles' );
 
 /*
  * Remove query string from enqueued files. See https://developers.google.com/speed/docs/insights/rules
@@ -404,14 +404,14 @@ add_action( 'wp_enqueue_scripts', 'sitepoint-base-theme_scripts_styles' );
  * @param string css/js include
  * @return string
  */
-function sitepoint-base-theme_remove_cssjs_ver( $src ) {
+function sitepointbasetheme_remove_cssjs_ver( $src ) {
 	if ( strpos( $src, '?ver=' ) ) {
 		$src = remove_query_arg( 'ver', $src );
 	}
 	return $src;
 }
-add_filter( 'style_loader_src', 'sitepoint-base-theme_remove_cssjs_ver', 10, 2 );
-add_filter( 'script_loader_src', 'sitepoint-base-theme_remove_cssjs_ver', 10, 2 );
+add_filter( 'style_loader_src', 'sitepointbasetheme_remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'sitepointbasetheme_remove_cssjs_ver', 10, 2 );
 
 /**
  * Displays the optional custom logo. If no logo is available, it displays the Site Title
@@ -420,8 +420,8 @@ add_filter( 'script_loader_src', 'sitepoint-base-theme_remove_cssjs_ver', 10, 2 
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_the_custom_logo' ) ) {
-	function sitepoint-base-theme_the_custom_logo() {
+if ( ! function_exists( 'sitepointbasetheme_the_custom_logo' ) ) {
+	function sitepointbasetheme_the_custom_logo() {
 		$siteTitleStr = "";
 
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
@@ -444,8 +444,8 @@ if ( ! function_exists( 'sitepoint-base-theme_the_custom_logo' ) ) {
  * @param string html ID
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_content_nav' ) ) {
-	function sitepoint-base-theme_content_nav( $nav_id ) {
+if ( ! function_exists( 'sitepointbasetheme_content_nav' ) ) {
+	function sitepointbasetheme_content_nav( $nav_id ) {
 		global $wp_query;
 		$big = 999999999; // need an unlikely integer
 
@@ -502,7 +502,7 @@ if ( ! function_exists( 'sitepoint-base-theme_content_nav' ) ) {
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
- * simply create your own sitepoint-base-theme_comment(), and that function will be used instead.
+ * simply create your own sitepointbasetheme_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  * (Note the lack of a trailing </li>. WordPress will add it itself once it's done listing any children and whatnot)
@@ -514,8 +514,8 @@ if ( ! function_exists( 'sitepoint-base-theme_content_nav' ) ) {
  * @param integer Comment depth
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_comment' ) ) {
-	function sitepoint-base-theme_comment( $comment, $args, $depth ) {
+if ( ! function_exists( 'sitepointbasetheme_comment' ) ) {
+	function sitepointbasetheme_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) {
 		case 'pingback' :
@@ -576,8 +576,8 @@ if ( ! function_exists( 'sitepoint-base-theme_comment' ) ) {
  * @param string Comment form fields html
  * @return string The updated comment form fields html
  */
-if ( ! function_exists( 'sitepoint-base-theme_comment_form_default_fields' ) ) {
-	function sitepoint-base-theme_comment_form_default_fields( $fields ) {
+if ( ! function_exists( 'sitepointbasetheme_comment_form_default_fields' ) ) {
+	function sitepointbasetheme_comment_form_default_fields( $fields ) {
 
 		$commenter = wp_get_current_commenter();
 		$req = get_option( 'require_name_email' );
@@ -593,7 +593,7 @@ if ( ! function_exists( 'sitepoint-base-theme_comment_form_default_fields' ) ) {
 
 	}
 }
-add_action( 'comment_form_default_fields', 'sitepoint-base-theme_comment_form_default_fields' );
+add_action( 'comment_form_default_fields', 'sitepointbasetheme_comment_form_default_fields' );
 
 /**
  * Update the Comments form to add a 'required' span to the Comment textarea within the form label, because it's pointless
@@ -604,16 +604,16 @@ add_action( 'comment_form_default_fields', 'sitepoint-base-theme_comment_form_de
  * @param string Comment form textarea html
  * @return string The updated comment form textarea html
  */
-if ( ! function_exists( 'sitepoint-base-theme_comment_form_field_comment' ) ) {
-	function sitepoint-base-theme_comment_form_field_comment( $field ) {
-		if ( !sitepoint-base-theme_is_woocommerce_active() || ( sitepoint-base-theme_is_woocommerce_active() && !is_product() ) ) {
+if ( ! function_exists( 'sitepointbasetheme_comment_form_field_comment' ) ) {
+	function sitepointbasetheme_comment_form_field_comment( $field ) {
+		if ( !sitepointbasetheme_is_woocommerce_active() || ( sitepointbasetheme_is_woocommerce_active() && !is_product() ) ) {
 			$field = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'sitepoint-base-theme' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
 		}
 		return $field;
 
 	}
 }
-add_action( 'comment_form_field_comment', 'sitepoint-base-theme_comment_form_field_comment' );
+add_action( 'comment_form_field_comment', 'sitepointbasetheme_comment_form_field_comment' );
 
 /**
  * Prints HTML with meta information for current post: author and date
@@ -622,8 +622,8 @@ add_action( 'comment_form_field_comment', 'sitepoint-base-theme_comment_form_fie
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_posted_on' ) ) {
-	function sitepoint-base-theme_posted_on() {
+if ( ! function_exists( 'sitepointbasetheme_posted_on' ) ) {
+	function sitepointbasetheme_posted_on() {
 		$post_icon = '';
 		switch ( get_post_format() ) {
 			case 'aside':
@@ -705,8 +705,8 @@ if ( ! function_exists( 'sitepoint-base-theme_posted_on' ) ) {
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_entry_meta' ) ) {
-	function sitepoint-base-theme_entry_meta() {
+if ( ! function_exists( 'sitepointbasetheme_entry_meta' ) ) {
+	function sitepointbasetheme_entry_meta() {
 		// Return the Tags as a list
 		$tag_list = "";
 		if ( get_the_tag_list() ) {
@@ -727,15 +727,15 @@ if ( ! function_exists( 'sitepoint-base-theme_entry_meta' ) ) {
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_content_width' ) ) {
-	function sitepoint-base-theme_content_width() {
+if ( ! function_exists( 'sitepointbasetheme_content_width' ) ) {
+	function sitepointbasetheme_content_width() {
 		if ( is_page_template( 'full-width.php' ) || is_attachment() ) {
 			global $content_width;
 			$content_width = 1160;
 		}
 	}
 }
-add_action( 'template_redirect', 'sitepoint-base-theme_content_width' );
+add_action( 'template_redirect', 'sitepointbasetheme_content_width' );
 
 /**
  * Change the "read more..." link so it links to the top of the page rather than part way down
@@ -745,7 +745,7 @@ add_action( 'template_redirect', 'sitepoint-base-theme_content_width' );
  * @param string The 'Read more' link
  * @return string The link to the post url without the more tag appended on the end
  */
-function sitepoint-base-theme_remove_more_jump_link( $link ) {
+function sitepointbasetheme_remove_more_jump_link( $link ) {
 	$offset = strpos( $link, '#more-' );
 	if ( $offset ) {
 		$end = strpos( $link, '"', $offset );
@@ -755,7 +755,7 @@ function sitepoint-base-theme_remove_more_jump_link( $link ) {
 	}
 	return $link;
 }
-add_filter( 'the_content_more_link', 'sitepoint-base-theme_remove_more_jump_link' );
+add_filter( 'the_content_more_link', 'sitepointbasetheme_remove_more_jump_link' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
@@ -764,27 +764,27 @@ add_filter( 'the_content_more_link', 'sitepoint-base-theme_remove_more_jump_link
  *
  * @return string The 'Continue reading' link
  */
-if ( ! function_exists( 'sitepoint-base-theme_continue_reading_link' ) ) {
-	function sitepoint-base-theme_continue_reading_link() {
+if ( ! function_exists( 'sitepointbasetheme_continue_reading_link' ) ) {
+	function sitepointbasetheme_continue_reading_link() {
 		return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Continue reading', 'sitepoint-base-theme' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array( 'span' => array(
 				'class' => array() ) ) ) . '</a></p>';
 	}
 }
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with the sitepoint-base-theme_continue_reading_link().
+ * Replaces "[...]" (appended to automatically generated excerpts) with the sitepointbasetheme_continue_reading_link().
  *
  * @since Sitepoint Base Theme 1.0
  *
  * @param string Auto generated excerpt
  * @return string The filtered excerpt
  */
-if ( ! function_exists( 'sitepoint-base-theme_auto_excerpt_more' ) ) {
-	function sitepoint-base-theme_auto_excerpt_more( $more ) {
-		return sitepoint-base-theme_continue_reading_link();
+if ( ! function_exists( 'sitepointbasetheme_auto_excerpt_more' ) ) {
+	function sitepointbasetheme_auto_excerpt_more( $more ) {
+		return sitepointbasetheme_continue_reading_link();
 	}
 }
-add_filter( 'excerpt_more', 'sitepoint-base-theme_auto_excerpt_more' );
+add_filter( 'excerpt_more', 'sitepointbasetheme_auto_excerpt_more' );
 
 /**
  * Add Filter to allow Shortcodes to work in the Sidebar
@@ -800,8 +800,8 @@ add_filter( 'widget_text', 'do_shortcode' );
  *
  * @return string Footer credits & link
  */
-if ( ! function_exists( 'sitepoint-base-theme_get_credits' ) ) {
-	function sitepoint-base-theme_get_credits() {
+if ( ! function_exists( 'sitepointbasetheme_get_credits' ) ) {
+	function sitepointbasetheme_get_credits() {
 		$output = '';
 		$output = sprintf( '<p>%1$s <a href="%2$s" title="%3$s">%4$s</a></p>',
 			esc_html__( 'Proudly powered by', 'sitepoint-base-theme' ),
@@ -827,8 +827,8 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_before_woocommerce_wrapper' ) ) {
-	function sitepoint-base-theme_before_woocommerce_wrapper() {
+if ( ! function_exists( 'sitepointbasetheme_before_woocommerce_wrapper' ) ) {
+	function sitepointbasetheme_before_woocommerce_wrapper() {
 		echo '<div id="maincontentcontainer">';
 		echo '<div id="primary" class="grid-container site-content" role="main">';
 	}
@@ -841,8 +841,8 @@ if ( ! function_exists( 'sitepoint-base-theme_before_woocommerce_wrapper' ) ) {
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_after_woocommerce_wrapper' ) ) {
-	function sitepoint-base-theme_after_woocommerce_wrapper() {
+if ( ! function_exists( 'sitepointbasetheme_after_woocommerce_wrapper' ) ) {
+	function sitepointbasetheme_after_woocommerce_wrapper() {
 		echo '</div> <!-- /#primary.grid-container.site-content -->';
 		echo '</div> <!-- /#maincontentcontainer -->';
 	}
@@ -855,7 +855,7 @@ if ( ! function_exists( 'sitepoint-base-theme_after_woocommerce_wrapper' ) ) {
  *
  * @return void
  */
-function sitepoint-base-theme_is_woocommerce_active() {
+function sitepointbasetheme_is_woocommerce_active() {
 	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 		return true;
 	}
@@ -871,15 +871,15 @@ function sitepoint-base-theme_is_woocommerce_active() {
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_setup_woocommerce_wrappers' ) ) {
-	function sitepoint-base-theme_setup_woocommerce_wrappers() {
-		if ( sitepoint-base-theme_is_woocommerce_active() && is_woocommerce() ) {
-				add_action( 'sitepoint-base-theme_before_woocommerce', 'sitepoint-base-theme_before_woocommerce_wrapper', 10, 0 );
-				add_action( 'sitepoint-base-theme_after_woocommerce', 'sitepoint-base-theme_after_woocommerce_wrapper', 10, 0 );
+if ( ! function_exists( 'sitepointbasetheme_setup_woocommerce_wrappers' ) ) {
+	function sitepointbasetheme_setup_woocommerce_wrappers() {
+		if ( sitepointbasetheme_is_woocommerce_active() && is_woocommerce() ) {
+				add_action( 'sitepointbasetheme_before_woocommerce', 'sitepointbasetheme_before_woocommerce_wrapper', 10, 0 );
+				add_action( 'sitepointbasetheme_after_woocommerce', 'sitepointbasetheme_after_woocommerce_wrapper', 10, 0 );
 		}
 	}
 }
-add_action( 'template_redirect', 'sitepoint-base-theme_setup_woocommerce_wrappers', 9 );
+add_action( 'template_redirect', 'sitepointbasetheme_setup_woocommerce_wrappers', 9 );
 
 /**
  * Outputs the opening wrapper for the WooCommerce content
@@ -888,8 +888,8 @@ add_action( 'template_redirect', 'sitepoint-base-theme_setup_woocommerce_wrapper
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_woocommerce_before_main_content' ) ) {
-	function sitepoint-base-theme_woocommerce_before_main_content() {
+if ( ! function_exists( 'sitepointbasetheme_woocommerce_before_main_content' ) ) {
+	function sitepointbasetheme_woocommerce_before_main_content() {
 		if ( is_product() ) {
 			echo '<div class="grid-100">';
 		}
@@ -898,7 +898,7 @@ if ( ! function_exists( 'sitepoint-base-theme_woocommerce_before_main_content' )
 		}
 	}
 }
-add_action( 'woocommerce_before_main_content', 'sitepoint-base-theme_woocommerce_before_main_content', 10 );
+add_action( 'woocommerce_before_main_content', 'sitepointbasetheme_woocommerce_before_main_content', 10 );
 
 /**
  * Outputs the closing wrapper for the WooCommerce content
@@ -907,12 +907,12 @@ add_action( 'woocommerce_before_main_content', 'sitepoint-base-theme_woocommerce
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_woocommerce_after_main_content' ) ) {
-	function sitepoint-base-theme_woocommerce_after_main_content() {
+if ( ! function_exists( 'sitepointbasetheme_woocommerce_after_main_content' ) ) {
+	function sitepointbasetheme_woocommerce_after_main_content() {
 		echo '</div>';
 	}
 }
-add_action( 'woocommerce_after_main_content', 'sitepoint-base-theme_woocommerce_after_main_content', 10 );
+add_action( 'woocommerce_after_main_content', 'sitepointbasetheme_woocommerce_after_main_content', 10 );
 
 /**
  * Remove the sidebar from the WooCommerce product page
@@ -921,14 +921,14 @@ add_action( 'woocommerce_after_main_content', 'sitepoint-base-theme_woocommerce_
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_remove_woocommerce_sidebar' ) ) {
-	function sitepoint-base-theme_remove_woocommerce_sidebar() {
+if ( ! function_exists( 'sitepointbasetheme_remove_woocommerce_sidebar' ) ) {
+	function sitepointbasetheme_remove_woocommerce_sidebar() {
 		if ( is_product() ) {
 			remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 		}
 	}
 }
-add_action( 'woocommerce_before_main_content', 'sitepoint-base-theme_remove_woocommerce_sidebar' );
+add_action( 'woocommerce_before_main_content', 'sitepointbasetheme_remove_woocommerce_sidebar' );
 
 /**
  * Set the number of products to display on the WooCommerce shop page
@@ -937,12 +937,12 @@ add_action( 'woocommerce_before_main_content', 'sitepoint-base-theme_remove_wooc
  *
  * @return void
  */
-if ( ! function_exists( 'sitepoint-base-theme_shop_product_count' ) ) {
-	function sitepoint-base-theme_shop_product_count( $numprods ) {
+if ( ! function_exists( 'sitepointbasetheme_shop_product_count' ) ) {
+	function sitepointbasetheme_shop_product_count( $numprods ) {
 		return 12;
 	}
 }
-add_filter( 'loop_shop_per_page', 'sitepoint-base-theme_shop_product_count', 20 );
+add_filter( 'loop_shop_per_page', 'sitepointbasetheme_shop_product_count', 20 );
 
 /**
  * Filter the WooCommerce pagination so that it matches the theme pagination
@@ -951,8 +951,8 @@ add_filter( 'loop_shop_per_page', 'sitepoint-base-theme_shop_product_count', 20 
  *
  * @return array Pagination arguments
  */
-if ( ! function_exists( 'sitepoint-base-theme_woocommerce_pagination_args' ) ) {
-	function sitepoint-base-theme_woocommerce_pagination_args( $paginationargs ) {
+if ( ! function_exists( 'sitepointbasetheme_woocommerce_pagination_args' ) ) {
+	function sitepointbasetheme_woocommerce_pagination_args( $paginationargs ) {
 		$paginationargs[ 'prev_text'] = wp_kses( __( '<i class="fa fa-angle-left"></i> Previous', 'sitepoint-base-theme' ), array( 'i' => array(
 			'class' => array() ) ) );
 		$paginationargs[ 'next_text'] = wp_kses( __( 'Next <i class="fa fa-angle-right"></i>', 'sitepoint-base-theme' ), array( 'i' => array(
@@ -960,4 +960,4 @@ if ( ! function_exists( 'sitepoint-base-theme_woocommerce_pagination_args' ) ) {
 		return $paginationargs;
 	}
 }
-add_filter( 'woocommerce_pagination_args', 'sitepoint-base-theme_woocommerce_pagination_args', 10 );
+add_filter( 'woocommerce_pagination_args', 'sitepointbasetheme_woocommerce_pagination_args', 10 );

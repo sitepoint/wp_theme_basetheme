@@ -43,7 +43,7 @@
 
 		<header id="masthead" class="grid-container site-header" role="banner">
 			<div class="grid-40 tablet-grid-40 site-title">
-				<?php sitepoint-base-theme_the_custom_logo() ?>
+				<?php sitepointbasetheme_the_custom_logo() ?>
 			</div> <!-- /.grid-40.site-title -->
 
 			<div class="grid-60 tablet-grid-60">
@@ -67,4 +67,4 @@
 			</div> <!-- /.banner.grid-container` -->
 		</div> <!-- /#bannercontainer -->
 	<?php } ?>
-	<?php	do_action( 'sitepoint-base-theme_before_woocommerce' ); ?>
+	<?php	do_action( 'sitepointbasetheme_before_woocommerce' ); ?>
