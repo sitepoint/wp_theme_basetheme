@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  wordpress:
+    image: wordpress
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html/wp-content/themes/sitepoint-base-theme
+    environment:
+      WORDPRESS_DB_PASSWORD: mDFFPk2CcC9#httUh5F3
+
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: mDFFPk2CcC9#httUh5F3
