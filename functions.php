@@ -181,12 +181,11 @@ if ( ! function_exists( 'sitepointbasetheme_fonts_url' ) ) {
 			if ( 'off' !== $headerFont )
 				$font_families[] = 'Dosis:700';
 
-			$protocol = is_ssl() ? 'https' : 'http';
 			$query_args = array(
 				'family' => implode( '|', $font_families ),
 				'subset' => $subsets,
 			);
-			$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
+		  {{{$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );}}}
 		}
 
 		return $fonts_url;
