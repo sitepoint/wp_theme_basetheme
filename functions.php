@@ -7,13 +7,17 @@
  */
 
 /**
- * Set the content width based on the theme's design and stylesheet.
+ * Set the content width in pixels, based on the theme's design and stylesheet.
  *
- * @since Sitepoint Base Theme 1.0
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
  */
-if ( ! isset( $content_width ) ) {
-	$content_width = 806; /* Default the embedded content width to 790px */
+function sitepoint_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'sitepoint_content_width', 806 );
 }
+add_action( 'after_setup_theme', 'sitepoint_content_width', 0 );
+
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
