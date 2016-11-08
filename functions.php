@@ -756,13 +756,6 @@ if ( ! function_exists( 'sitepointbasetheme_auto_excerpt_more' ) ) {
 add_filter( 'excerpt_more', 'sitepointbasetheme_auto_excerpt_more' );
 
 /**
- * Add Filter to allow Shortcodes to work in the Sidebar
- *
- * @since Sitepoint Base Theme 1.0
- */
-add_filter( 'widget_text', 'do_shortcode' );
-
-/**
  * Return a string containing the footer credits & link
  *
  * @since Sitepoint Base Theme 1.0
