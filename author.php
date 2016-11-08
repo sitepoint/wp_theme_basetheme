@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying an archive page for Categories.
+ * The template for displaying an archive page for Authors.
  *
  * @package Sitepoint Base
  * @since Sitepoint Base 1.0
