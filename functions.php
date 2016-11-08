@@ -324,17 +324,14 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		 */
 
 		// Start off with a clean base by using normalise.
-		wp_register_style( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '4.1.1', 'all' );
-		wp_enqueue_style( 'normalize' );
+		wp_enqueue_script( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '4.1.1', 'all' );
 
 		// Register and enqueue our icon font
 		// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-		wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array( 'normalize' ), '4.6.3', 'all' );
-		wp_enqueue_style( 'fontawesome' );
+		wp_enqueue_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array( 'normalize' ), '4.6.3', 'all' );
 
 		// Our styles for setting up the grid. We're using Unsemantic. http://unsemantic.com
-		wp_register_style( 'unsemanticgrid', trailingslashit( get_template_directory_uri() ) . 'css/unsemantic.css' , array( 'fontawesome' ), '1.0.0', 'all' );
-		wp_enqueue_style( 'unsemanticgrid' );
+		wp_enqueue_style( 'unsemanticgrid', trailingslashit( get_template_directory_uri() ) . 'css/unsemantic.css' , array( 'fontawesome' ), '1.0.0', 'all' );
 
 		/*
 		 * Load our Google Fonts.
@@ -353,19 +350,18 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		// If using a child theme, auto-load the parent theme style.
 		// Props to Justin Tadlock for this recommendation - http://justintadlock.com/archives/2014/11/03/loading-parent-styles-for-child-themes
 		if ( is_child_theme() ) {
-			wp_enqueue_style( 'parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+			wp_enqueue_style( 'sitepoint-base-theme-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
 		}
 
 		// Enqueue the default WordPress stylesheet
-		wp_enqueue_style( 'style', get_stylesheet_uri() );
+		wp_enqueue_style( 'sitepoint-base-theme-style', get_stylesheet_uri() );
 
 		/**
 		 * Register and enqueue our scripts
 		 */
 
 		// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
-		wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-min.js', array(), '3.3.1', false );
-		wp_enqueue_script( 'modernizr' );
+		wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-min.js', array(), '3.3.1', false );
 
 		// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -388,8 +384,7 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		}
 
 		// Load our script that envokes a button toggle for the main navigation menu on small screens
-		wp_register_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '1.0.0', true );
-		wp_enqueue_script( 'small-menu' );
+		wp_enqueue_script( 'sitepoint-base-theme-small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '1.0.0', true );
 
 	}
 }
