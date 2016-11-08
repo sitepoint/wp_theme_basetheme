@@ -350,11 +350,11 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		// If using a child theme, auto-load the parent theme style.
 		// Props to Justin Tadlock for this recommendation - http://justintadlock.com/archives/2014/11/03/loading-parent-styles-for-child-themes
 		if ( is_child_theme() ) {
-			wp_enqueue_style( 'sitepoint-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+			wp_enqueue_style( 'sitepoint-base-theme-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
 		}
 
 		// Enqueue the default WordPress stylesheet
-		wp_enqueue_style( 'sitepoint-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'sitepoint-base-theme-style', get_stylesheet_uri() );
 
 		/**
 		 * Register and enqueue our scripts
@@ -384,7 +384,7 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		}
 
 		// Load our script that envokes a button toggle for the main navigation menu on small screens
-		wp_enqueue_script( 'sitepoint-small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'sitepoint-base-theme-small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '1.0.0', true );
 
 	}
 }
