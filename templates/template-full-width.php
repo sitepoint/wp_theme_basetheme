@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full-width Page Template
+ * Template Name: Full-width Page
  *
  * Description: Displays a full-width page, with no sidebar. This template is great for pages
  * containing large amounts of content.
