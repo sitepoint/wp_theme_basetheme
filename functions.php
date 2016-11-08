@@ -48,7 +48,7 @@ if ( ! function_exists( 'sitepointbasetheme_setup' ) ) {
 		add_theme_support( 'post-thumbnails' );
 
 		// Create an extra image size for the Post featured image
-		add_image_size( 'sitepoint_post_feature_full_width', 806, 300, true );
+		add_image_size( 'sitepoint_base_theme_post_feature_full_width', 806, 300, true );
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
