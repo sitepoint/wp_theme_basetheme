@@ -360,21 +360,6 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		// Load jQuery Validation as well as the initialiser to provide client side comment form validation
-		// You can change the validation error messages below
-		if ( is_singular() && comments_open() ) {
-			wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.min.1.15.0.js', array( 'jquery' ), '1.15.0', true );
-			wp_register_script( 'commentvalidate', trailingslashit( get_template_directory_uri() ) . 'js/comment-form-validation.js', array( 'jquery', 'validate' ), '1.0.0', true );
-
-			wp_enqueue_script( 'commentvalidate' );
-			wp_localize_script( 'commentvalidate', 'comments_object', array(
-				'req' => get_option( 'require_name_email' ),
-				'author'  => esc_html__( 'Please enter your name', 'sitepoint-base-theme' ),
-				'email'  => esc_html__( 'Please enter a valid email address', 'sitepoint-base-theme' ),
-				'comment' => esc_html__( 'Please add a comment', 'sitepoint-base-theme' ) )
-			);
-		}
-
 		// Load our script that envokes a button toggle for the main navigation menu on small screens
 		wp_enqueue_script( 'sitepoint-base-theme-small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '1.0.0', true );
 
