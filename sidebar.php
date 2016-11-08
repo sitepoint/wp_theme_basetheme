@@ -10,7 +10,7 @@
 
 		<div id="secondary" class="widget-area" role="complementary">
 			<?php
-			do_action( 'before_sidebar' );
+			do_action( 'sitepointbasetheme_before_sidebar' );
 
 			if ( is_active_sidebar( 'sidebar-main' ) ) {
 				dynamic_sidebar( 'sidebar-main' );
