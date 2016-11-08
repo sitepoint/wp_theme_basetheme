@@ -444,8 +444,10 @@ if ( ! function_exists( 'sitepointbasetheme_the_custom_logo' ) ) {
  * @param string html ID
  * @return void
  */
-if ( ! function_exists( 'sitepointbasetheme_content_nav' ) ) {
-	function sitepointbasetheme_content_nav( $nav_id ) {
+
+
+if ( ! function_exists( 'the_posts_pagination' ) ) {
+	function the_posts_pagination( $nav_id ) {
 		global $wp_query;
 		$big = 999999999; // need an unlikely integer
 
