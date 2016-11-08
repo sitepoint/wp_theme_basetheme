@@ -382,7 +382,7 @@ if ( ! function_exists( 'sitepointbasetheme_the_custom_logo' ) ) {
 			the_custom_logo();
 		}
 		else {
-			$siteTitleStr .= '<h1><a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home">';
+			$siteTitleStr .= '<h1><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
 			$siteTitleStr .= get_bloginfo( 'name' );
 			$siteTitleStr .= '</a></h1>';
 			echo $siteTitleStr;
@@ -493,9 +493,8 @@ if ( ! function_exists( 'sitepointbasetheme_comment' ) ) {
 							get_comment_author_link(),
 							// If current post author is also comment author, make it known visually.
 							( $comment->user_id === $post->post_author ) ? '<span> ' . esc_html__( 'Post author', 'sitepoint-base-theme' ) . '</span>' : '' );
-						printf( '<a href="%1$s" title="Posted %2$s"><time itemprop="datePublished" datetime="%3$s">%4$s</time></a>',
+						printf( '<a href="%1$s"><time itemprop="datePublished" datetime="%2$s">%3$s</time></a>',
 							esc_url( get_comment_link( $comment->comment_ID ) ),
-							sprintf( esc_html__( '%1$s @ %2$s', 'sitepoint-base-theme' ), esc_html( get_comment_date() ), esc_attr( get_comment_time() ) ),
 							get_comment_time( 'c' ),
 							/* Translators: 1: date, 2: time */
 							sprintf( esc_html__( '%1$s at %2$s', 'sitepoint-base-theme' ), get_comment_date(), get_comment_time() )
@@ -613,18 +612,16 @@ if ( ! function_exists( 'sitepointbasetheme_posted_on' ) ) {
 		}
 
 		// Translators: 1: Icon 2: Permalink 3: Post date and time 4: Publish date in ISO format 5: Post date
-		$date = sprintf( '<span class="publish-date"><i class="fa %1$s" aria-hidden="true"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a></span>',
+		$date = sprintf( '<span class="publish-date"><i class="fa %1$s" aria-hidden="true"></i> <a href="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" itemprop="datePublished">%4$s</time></a></span>',
 			$post_icon,
 			esc_url( get_permalink() ),
-			sprintf( esc_html__( '%1$s @ %2$s', 'sitepoint-base-theme' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() )
 		);
 
 		// Translators: 1: Date link 2: Author link 3: Categories 4: No. of Comments
-		$author = sprintf( '<span class="publish-author"><i class="fa fa-pencil" aria-hidden="true"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address></span>',
+		$author = sprintf( '<span class="publish-author"><i class="fa fa-pencil" aria-hidden="true"></i> <address class="author vcard"><a class="url fn n" href="%1$s" rel="author">%2$s</a></address></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'sitepoint-base-theme' ), get_the_author() ) ),
 			get_the_author()
 		);
 
@@ -632,9 +629,8 @@ if ( ! function_exists( 'sitepointbasetheme_posted_on' ) ) {
 		$categories_list = get_the_category_list( esc_html__( ' ', 'sitepoint-base-theme' ) );
 
 		// Translators: 1: Permalink 2: Title 3: No. of Comments
-		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment" aria-hidden="true"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
+		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment" aria-hidden="true"></i> <a href="%1$s">%2$s</a></span>',
 			esc_url( get_comments_link() ),
-			esc_attr( esc_html__( 'Comment on ' , 'sitepoint-base-theme' ) . the_title_attribute( 'echo=0' ) ),
 			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number(), 'sitepoint-base-theme' ), get_comments_number() ) : esc_html__( 'No Comments', 'sitepoint-base-theme' ) )
 		);
 
@@ -720,7 +716,7 @@ add_filter( 'the_content_more_link', 'sitepointbasetheme_remove_more_jump_link' 
  */
 if ( ! function_exists( 'sitepointbasetheme_continue_reading_link' ) ) {
 	function sitepointbasetheme_continue_reading_link() {
-		return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Continue reading', 'sitepoint-base-theme' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array( 'span' => array(
+		return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '">' . wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array( 'span' => array(
 				'class' => array() ) ) ) . '</a></p>';
 	}
 }
@@ -750,10 +746,9 @@ add_filter( 'excerpt_more', 'sitepointbasetheme_auto_excerpt_more' );
 if ( ! function_exists( 'sitepointbasetheme_get_credits' ) ) {
 	function sitepointbasetheme_get_credits() {
 		$output = '';
-		$output = sprintf( '<p>%1$s <a href="%2$s" title="%3$s">%4$s</a></p>',
+		$output = sprintf( '<p>%1$s <a href="%2$s">%3$s</a></p>',
 			esc_html__( 'Proudly powered by', 'sitepoint-base-theme' ),
 			esc_url( esc_html__( 'http://wordpress.org/', 'sitepoint-base-theme' ) ),
-			esc_attr( esc_html__( 'Semantic Personal Publishing Platform', 'sitepoint-base-theme' ) ),
 			esc_html__( 'WordPress', 'sitepoint-base-theme' )
 		);
 

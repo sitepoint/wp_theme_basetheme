@@ -19,7 +19,7 @@
 			<?php }
 			else { ?>
 				<h1 class="entry-title">
-					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Permalink to ', 'sitepoint-base-theme' ) . '%s', the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h1>
 			<?php } // is_single() ?>
 			<?php sitepointbasetheme_posted_on(); ?>
@@ -28,7 +28,7 @@
 					the_post_thumbnail( 'sitepoint_base_theme_post_feature_full_width' );
 				}
 				else { ?>
-					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Permalink to ', 'sitepoint-base-theme' ) . '%s', the_title_attribute( 'echo=0' ) ) ); ?>">
+					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail( 'sitepoint_base_theme_post_feature_full_width' ); ?>
 					</a>
 				<?php }
