@@ -125,19 +125,7 @@ if ( ! function_exists( 'sitepointbasetheme_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'sitepointbasetheme_setup' );
 
-/**
- * Enable backwards compatability for title-tag support
- *
- * @since Sitepoint Base Theme 1.0
- *
- * @return void
- */
-if ( ! function_exists( '_wp_render_title_tag' ) ) {
-	function sitepointbasetheme_slug_render_title() { ?>
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<?php }
-	add_action( 'wp_head', 'sitepointbasetheme_slug_render_title' );
-}
+
 
 /**
  * Returns the Google font stylesheet URL, if available.
