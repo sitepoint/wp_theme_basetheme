@@ -382,23 +382,6 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'sitepointbasetheme_scripts_styles' );
 
-/*
- * Remove query string from enqueued files. See https://developers.google.com/speed/docs/insights/rules
- *
- * @since Sitepoint Base Theme 1.0
- *
- * @param string css/js include
- * @return string
- */
-function sitepointbasetheme_remove_cssjs_ver( $src ) {
-	if ( strpos( $src, '?ver=' ) ) {
-		$src = remove_query_arg( 'ver', $src );
-	}
-	return $src;
-}
-add_filter( 'style_loader_src', 'sitepointbasetheme_remove_cssjs_ver', 10, 2 );
-add_filter( 'script_loader_src', 'sitepointbasetheme_remove_cssjs_ver', 10, 2 );
-
 /**
  * Displays the optional custom logo. If no logo is available, it displays the Site Title
  *
