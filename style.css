@@ -2256,3 +2256,35 @@ h1.page-title {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+
+/*mobile menu added style*/
+@media screen and (max-width:519px){
+
+	nav ul.sub-menu {
+		display:none
+	}
+
+	.nav-menu li {
+			text-align: left !important;
+	}
+
+	.arrow-down, .arrow-down-open, .arrow-down-close {
+		cursor: pointer;
+		position: absolute;
+		right: 6%;
+		margin-top: 8px;
+	}
+
+	ul.sub-menu li {
+			background: #ebe9eb;
+			padding: 0px 5px;
+	}
+
+	ul.sub-menu li li {
+			background: #ccc;
+			padding: 0px 17px;
+			margin: 0 -5px;
+	}
+
+}

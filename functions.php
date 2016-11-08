@@ -316,7 +316,7 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		 */
 
 		// Start off with a clean base by using normalise.
-		wp_enqueue_script( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '4.1.1', 'all' );
+		wp_enqueue_style( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '4.1.1', 'all' );
 
 		// Register and enqueue our icon font
 		// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome

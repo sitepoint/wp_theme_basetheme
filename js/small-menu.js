@@ -36,4 +36,42 @@ jQuery( document ).ready( function( $ ) {
 			}
 		}, 200 );
 	} );
+
+// mobile menu scripts
+// to make the script run when the browser screen is resize
+	$( window ).resize(function() {
+		var screenSize = $(window).width();
+		if(screenSize < 520){
+				$(".menu-item-has-children").prepend('<i class="arrow-down-close fa fa-caret-right"></i>');
+			  $(".arrow-down-close").on("click", function(){
+					if($(this).hasClass("arrow-down-close")){
+						$(this).addClass("arrow-down-open");
+						$(this).removeClass("arrow-down-close");
+						$(this).next().next().show();
+					}else{
+						$(this).addClass("arrow-down-close");
+						$(this).removeClass("arrow-down-open");
+						$(this).next().next().hide();
+					}
+				});
+		}
+	});
+
+	// by default (on load to run the script)
+	var screenSize = $(window).width();
+	if(screenSize < 520){
+			$(".menu-item-has-children").prepend('<i class="arrow-down-close fa fa-caret-right"></i>');
+			$(".arrow-down-close").on("click", function(){
+				if($(this).hasClass("arrow-down-close")){
+					$(this).addClass("arrow-down-open");
+					$(this).removeClass("arrow-down-close");
+					$(this).next().next().show();
+				}else{
+					$(this).addClass("arrow-down-close");
+					$(this).removeClass("arrow-down-open");
+					$(this).next().next().hide();
+				}
+			});
+	}
+	
 } );
