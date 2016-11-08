@@ -320,7 +320,7 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 
 		// Register and enqueue our icon font
 		// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-		wp_enqueue_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.css' , array( 'normalize' ), '4.6.3', 'all' );
+		wp_enqueue_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array( 'normalize' ), '4.6.3', 'all' );
 
 		// Our styles for setting up the grid. We're using Unsemantic. http://unsemantic.com
 		wp_enqueue_style( 'unsemanticgrid', trailingslashit( get_template_directory_uri() ) . 'css/unsemantic.css' , array( 'fontawesome' ), '1.0.0', 'all' );
@@ -353,7 +353,7 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		 */
 
 		// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
-		wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr.js', array(), '3.3.1', false );
+		wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-min.js', array(), '3.3.1', false );
 
 		// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -363,7 +363,7 @@ if ( ! function_exists( 'sitepointbasetheme_scripts_styles' ) ) {
 		// Load jQuery Validation as well as the initialiser to provide client side comment form validation
 		// You can change the validation error messages below
 		if ( is_singular() && comments_open() ) {
-			wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.1.15.0.js', array( 'jquery' ), '1.15.0', true );
+			wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.min.1.15.0.js', array( 'jquery' ), '1.15.0', true );
 			wp_register_script( 'commentvalidate', trailingslashit( get_template_directory_uri() ) . 'js/comment-form-validation.js', array( 'jquery', 'validate' ), '1.0.0', true );
 
 			wp_enqueue_script( 'commentvalidate' );
