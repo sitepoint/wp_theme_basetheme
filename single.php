@@ -24,7 +24,7 @@ get_header(); ?>
 					}
 					?>
 
-					<?php sitepointbasetheme_content_nav( 'nav-below' ); ?>
+					<?php the_posts_pagination( 'nav-below' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 

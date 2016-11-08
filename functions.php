@@ -446,6 +446,7 @@ if ( ! function_exists( 'sitepointbasetheme_the_custom_logo' ) ) {
  */
 
 
+
 if ( ! function_exists( 'the_posts_pagination' ) ) {
 	function the_posts_pagination( $nav_id ) {
 		global $wp_query;
