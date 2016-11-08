@@ -28,7 +28,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 
-				<?php sitepointbasetheme_content_nav( 'nav-below' ); ?>
+				<?php the_posts_pagination( 'nav-below' ); ?>
 
 			<?php else : ?>
 
