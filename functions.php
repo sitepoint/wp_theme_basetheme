@@ -391,68 +391,6 @@ if ( ! function_exists( 'sitepointbasetheme_the_custom_logo' ) ) {
 }
 
 /**
- * Displays navigation to next/previous pages when applicable.
- *
- * @since Sitepoint Base Theme 1.0
- *
- * @param string html ID
- * @return void
- */
-if ( ! function_exists( 'sitepointbasetheme_content_nav' ) ) {
-	function sitepointbasetheme_content_nav( $nav_id ) {
-		global $wp_query;
-		$big = 999999999; // need an unlikely integer
-
-		$nav_class = 'site-navigation paging-navigation';
-		if ( is_single() ) {
-			$nav_class = 'site-navigation post-navigation nav-single';
-		}
-		?>
-		<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-			<h3 class="assistive-text"><?php esc_html_e( 'Post navigation', 'sitepoint-base-theme' ); ?></h3>
-
-			<?php if ( is_single() ) { // navigation links for single posts ?>
-
-				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="fa fa-angle-left" aria-hidden="true"></i>', 'Previous post link', 'sitepoint-base-theme' ) . '</span> %title' ); ?>
-				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="fa fa-angle-right" aria-hidden="true"></i>', 'Next post link', 'sitepoint-base-theme' ) . '</span>' ); ?>
-
-			<?php }
-			elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) { // navigation links for home, archive, and search pages ?>
-
-				<?php echo paginate_links( array(
-					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-					'format' => '?paged=%#%',
-					'current' => max( 1, get_query_var( 'paged' ) ),
-					'total' => $wp_query->max_num_pages,
-					'type' => 'list',
-					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left" aria-hidden="true"></i> <span>Previous</span>', 'sitepoint-base-theme' ),
-						array(
-							'i' => array(
-								'class' => array(),
-								'aria-hidden' => array()
-							),
-							'span' => array()
-						)
-					),
-					'next_text' => wp_kses( __( '<span>Next</span> <i class="fa fa-angle-right" aria-hidden="true"></i>', 'sitepoint-base-theme' ),
-						array(
-							'i' => array(
-								'class' => array(),
-								'aria-hidden' => array()
-							),
-							'span' => array()
-						)
-					)
-				) ); ?>
-
-			<?php } ?>
-
-		</nav><!-- #<?php echo $nav_id; ?> -->
-		<?php
-	}
-}
-
-/**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
