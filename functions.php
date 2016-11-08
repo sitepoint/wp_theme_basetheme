@@ -56,7 +56,7 @@ if ( ! function_exists( 'sitepointbasetheme_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
-				'primary' => esc_html__( 'Primary Menu', 'sitepoint-base-theme' )
+				'menu-1' => esc_html__( 'Primary Menu', 'sitepoint-base-theme' )
 			) );
 
 		// This theme supports a variety of post formats
@@ -220,7 +220,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 	function sitepointbasetheme_widgets_init() {
 		register_sidebar( array(
 				'name' => esc_html__( 'Main Sidebar', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-main',
+				'id' => 'sidebar-1',
 				'description' => esc_html__( 'Appears in the sidebar on all posts and pages', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -230,7 +230,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Blog Sidebar', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-blog',
+				'id' => 'sidebar-2',
 				'description' => esc_html__( 'Appears in the sidebar on the blog and archive pages only', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -240,7 +240,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Single Post Sidebar', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-single',
+				'id' => 'sidebar-3',
 				'description' => esc_html__( 'Appears in the sidebar on single posts only', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -250,7 +250,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Page Sidebar', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-page',
+				'id' => 'sidebar-4',
 				'description' => esc_html__( 'Appears in the sidebar on pages only', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -260,7 +260,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'First Footer Widget Area', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-footer1',
+				'id' => 'sidebar-5',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -270,7 +270,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Second Footer Widget Area', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-footer2',
+				'id' => 'sidebar-6',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -280,7 +280,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Third Footer Widget Area', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-footer3',
+				'id' => 'sidebar-7',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -290,7 +290,7 @@ if ( ! function_exists( 'sitepointbasetheme_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Fourth Footer Widget Area', 'sitepoint-base-theme' ),
-				'id' => 'sidebar-footer4',
+				'id' => 'sidebar-8',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base-theme' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
