@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Left Sidebar Page Template
+ * Template Name: Left Sidebar Page
  *
  * Description: Displays a page with a left hand sidebar.
  *
