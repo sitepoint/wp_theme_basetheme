@@ -2,8 +2,8 @@
 /**
  * The template for displaying an archive page for Tags.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.0
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 				<?php if ( have_posts() ) : ?>
 
 					<header class="archive-header">
-						<h1 class="archive-title"><?php printf( esc_html__( 'Tag Archives: %s', 'sitepoint-base-theme' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
+						<h1 class="archive-title"><?php printf( esc_html__( 'Tag Archives: %s', 'sitepoint-base' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
 
 						<?php if ( tag_description() ) { // Show an optional tag description ?>
 							<div class="archive-meta"><?php echo tag_description(); ?></div>

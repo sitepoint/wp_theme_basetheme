@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Sitepoint Base Theme\n"
+"Project-Id-Version: Sitepoint Base\n"
 "POT-Creation-Date: 2016-09-13 16:52+1000\n"
 "PO-Revision-Date: 2016-09-13 16:52+1000\n"
 "Last-Translator: Anthony Hortin <support@maddisondesigns.com>\n"
