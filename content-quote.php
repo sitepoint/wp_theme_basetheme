@@ -2,8 +2,8 @@
 /**
  * The template for displaying posts in the Quote post format
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.0
  */
 ?>
 
@@ -13,8 +13,8 @@
 	</header> <!-- /.entry-header -->
 	<div class="entry-content">
 		<blockquote>
-			<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array( 
-				'span' => array( 
+			<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array(
+				'span' => array(
 					'class' => array() )
 				) ) ); ?>
 			<cite><?php the_title(); ?></cite>

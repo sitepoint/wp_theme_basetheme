@@ -6,8 +6,8 @@
  * There are also four footer widgets displayed. These will be displayed from
  * one to four columns, depending on how many widgets are active.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.3.3
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.3.3
  */
 ?>
 

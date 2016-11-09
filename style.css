@@ -1,9 +1,9 @@
 /*
-Theme Name: Sitepoint Base Theme
+Theme Name: Sitepoint Base
 Theme URI: http://sitepoint.com/Sitepoint-base-theme
 Author: Sitepoint
 Author URI: http://sitepoint.com
-Description: The Sitepoint Base Theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The Sitepoint Base Theme is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder, SiteOrigin Page Builder and the Elementor Page Builder.
+Description: The Sitepoint Base is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The sitepoint base is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder, SiteOrigin Page Builder and the Elementor Page Builder.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -2038,7 +2038,7 @@ h1.page-title {
    Page Builders
    ========================================================================== */
 
-/* Divi Builder - Resize rows to match Sitepoint Base Theme */
+/* Divi Builder - Resize rows to match sitepoint base */
 .page-template-page-builderfullwidth.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row,
 .page-template-page-builderblank.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row,
 .page-template-page-builderboxed.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row {
