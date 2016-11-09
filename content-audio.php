@@ -17,7 +17,7 @@
 				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Permalink to ', 'sitepoint-base-theme' ) . '%s', the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 		<?php } // is_single() ?>
-		<?php sitepointbasetheme_posted_on(); ?>
+		<?php sitepointbase_posted_on(); ?>
 	</header> <!-- /.entry-header -->
 	<div class="entry-content">
 		<div class="audio-content">
@@ -37,7 +37,7 @@
 	<footer class="entry-meta">
 		<?php if ( is_singular() ) {
 			// Only show the tags on the Single Post page
-			sitepointbasetheme_entry_meta();
+			sitepointbase_entry_meta();
 		} ?>
 		<?php edit_post_link( esc_html__( 'Edit', 'sitepoint-base-theme' ) . ' <i class="fa fa-angle-right"></i>', '<div class="edit-link">', '</div>' ); ?>
 		<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) {

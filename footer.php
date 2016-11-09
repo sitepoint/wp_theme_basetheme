@@ -11,14 +11,14 @@
  */
 ?>
 
-	<?php	do_action( 'sitepointbasetheme_after_woocommerce' ); ?>
+	<?php	do_action( 'sitepointbase_after_woocommerce' ); ?>
 	<div id="footercontainer">
 
 		<?php get_sidebar( 'footer' ); ?>
 
 		<div class="grid-container smallprint">
 			<div class="grid-100">
-				<?php echo sitepointbasetheme_get_credits() ?>
+				<?php echo sitepointbase_get_credits() ?>
 			</div> <!-- /.grid-100 -->
 		</div> <!-- /.grid-container.smallprint -->
 

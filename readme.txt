@@ -18,7 +18,7 @@ If you do decide to use a child theme with Sitepoint Base, there's no need to us
 
 Sitepoint's base is a fluid, responsive grid based on percentages. It uses [Normalize](https://github.com/necolas/normalize.css) to make sure that browsers render all elements more consistently and [Modernizr](http://modernizr.com) for detecting HTML5 and CSS3 browser capabilities along with some default stylings from HTML5 Boilerplate. It also incorporates the gorgeous [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icon font by Dave Gandy.
 
-The main navigation uses the standard WordPress menu. Support for dropdown menus is included by default. If you'd like to envoke a button toggle for the main navigation menu on small screens, simply uncomment the two lines from the sitepointbasetheme_scripts_styles() function within functions.php to register and enqueue the necessary javascript file.
+The main navigation uses the standard WordPress menu. Support for dropdown menus is included by default. If you'd like to envoke a button toggle for the main navigation menu on small screens, simply uncomment the two lines from the sitepointbase_scripts_styles() function within functions.php to register and enqueue the necessary javascript file.
 
 If you're looking to build an eCommerce website, Sitepoint Base supports the excellent WooCommerce plugin, straight out of the box.
 
@@ -106,7 +106,7 @@ Since Sitepoint Base is a starter theme to kick off your own awesome theme, the 
 and change the name to something else. You'll then need to do a three-step find and replace on the name in all the templates.
 
 1. Search for Sitepoint Base inside single quotations to capture the text domain.
-2. Search for sitepointbasetheme_ to capture all the function names.
+2. Search for sitepointbase_ to capture all the function names.
 3. Search for Sitepoint Base with a space before it to replace all the occurrences of it in comments.
    (You'd replace this with the capitalized version of your theme name.)
 
@@ -114,7 +114,7 @@ or, to put it another way...
 
 Search for:'sitepoint-base-theme'
  Replace with:'yourawesomethemename'
-Search for:sitepointbasetheme_
+Search for:sitepointbase_
  Replace with:yourawesomethemename_
 Search for: Sitepoint Base
  Replace with: YourAwesomeThemeName
