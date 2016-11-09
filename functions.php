@@ -325,6 +325,9 @@ if ( ! function_exists( 'sitepointbase_scripts_styles' ) ) {
 		// Our styles for setting up the grid. We're using Unsemantic. http://unsemantic.com
 		wp_enqueue_style( 'unsemanticgrid', trailingslashit( get_template_directory_uri() ) . 'css/unsemantic.css' , array( 'fontawesome' ), '1.0.0', 'all' );
 
+		//style for the responsive menu. https://github.com/robinpoort/vanilla-js-responsive-menu
+		wp_enqueue_style( 'responsivemenu', trailingslashit( get_template_directory_uri() ) . 'css/responsivemenu.css' , array( 'fontawesome' ), '1.0.0', 'all' );
+
 		/*
 		 * Load our Google Fonts.
 		 *
@@ -360,12 +363,28 @@ if ( ! function_exists( 'sitepointbase_scripts_styles' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		// Load our script that envokes a button toggle for the main navigation menu on small screens
-		wp_enqueue_script( 'sitepoint-base-small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '1.0.0', true );
+		// Load our a dependency script for responsive menu.
+		wp_enqueue_script( 'sitepoint-base-theme-apollo', trailingslashit( get_template_directory_uri() ) . 'js/apollo.js', array(), '1.0.0', false );
+
+		//vanilla javascript to create the responsive menu.
+		wp_enqueue_script( 'sitepoint-base-theme-responsive-menu', trailingslashit( get_template_directory_uri() ) . 'js/responsive-menu.js', array(), '1.0.0', false );
 
 	}
 }
 add_action( 'wp_enqueue_scripts', 'sitepointbase_scripts_styles' );
+
+
+//function to load the responsive menu necessary to load in the footer
+function scipts_function() {
+   echo '<script type="text/javascript">
+    responsivemenu.init({
+        wrapper: document.querySelector(".navigation_container"),
+				onAfterInit: function() {
+				}
+    });
+</script>';
+}
+add_action( 'wp_footer', 'scipts_function' );
 
 /**
  * Displays the optional custom logo. If no logo is available, it displays the Site Title
