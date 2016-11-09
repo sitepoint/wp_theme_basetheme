@@ -4,8 +4,8 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.0
  */
 ?>
 

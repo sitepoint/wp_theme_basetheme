@@ -2,8 +2,8 @@
 /**
  * The template for displaying Author bios.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.2.5
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.2.5
  */
 ?>
 

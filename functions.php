@@ -1,9 +1,9 @@
 <?php
 /**
- * Sitepoint Base Theme functions and definitions
+ * Sitepoint Base functions and definitions
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.0
  */
 
 /**
@@ -26,7 +26,7 @@ add_action( 'after_setup_theme', 'sitepoint_content_width', 0 );
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -37,7 +37,7 @@ if ( ! function_exists( 'sitepointbasetheme_setup' ) ) {
 		/**
 		 * Make theme available for translation
 		 * Translations can be filed in the /languages/ directory
-		 * If you're building a theme based on Sitepoint Base Theme, use a find and replace
+		 * If you're building a theme based on Sitepoint Base, use a find and replace
 		 * to change 'sitepoint-base-theme' to the name of your theme in all the template files
 		 */
 		load_theme_textdomain( 'sitepoint-base-theme', trailingslashit( get_template_directory() ) . 'languages' );
@@ -136,7 +136,7 @@ add_action( 'after_setup_theme', 'sitepointbasetheme_setup' );
  *
  * The use of Open Sans and Dosis by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return string Font stylesheet or empty string if disabled.
  */
@@ -187,7 +187,7 @@ if ( ! function_exists( 'sitepointbasetheme_fonts_url' ) ) {
 /**
  * Adds additional stylesheets to the TinyMCE editor if needed.
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @param string $mce_css CSS path to load in TinyMCE.
  * @return string The filtered CSS paths list.
@@ -212,7 +212,7 @@ add_filter( 'mce_css', 'sitepointbasetheme_mce_css' );
 /**
  * Register widgetized areas
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -304,7 +304,7 @@ add_action( 'widgets_init', 'sitepointbasetheme_widgets_init' );
 /**
  * Enqueue scripts and styles
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -370,7 +370,7 @@ add_action( 'wp_enqueue_scripts', 'sitepointbasetheme_scripts_styles' );
 /**
  * Displays the optional custom logo. If no logo is available, it displays the Site Title
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -393,7 +393,7 @@ if ( ! function_exists( 'sitepointbasetheme_the_custom_logo' ) ) {
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @param string html ID
  * @return void
@@ -464,7 +464,7 @@ if ( ! function_exists( 'the_posts_pagination' ) ) {
  * Used as a callback by wp_list_comments() for displaying the comments.
  * (Note the lack of a trailing </li>. WordPress will add it itself once it's done listing any children and whatnot)
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @param array Comment
  * @param array Arguments
@@ -528,7 +528,7 @@ if ( ! function_exists( 'sitepointbasetheme_comment' ) ) {
 /**
  * Update the Comments form so that the 'required' span is contained within the form label.
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @param string Comment form fields html
  * @return string The updated comment form fields html
@@ -556,7 +556,7 @@ add_action( 'comment_form_default_fields', 'sitepointbasetheme_comment_form_defa
  * Update the Comments form to add a 'required' span to the Comment textarea within the form label, because it's pointless
  * submitting a comment that doesn't actually have any text in the comment field!
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @param string Comment form textarea html
  * @return string The updated comment form textarea html
@@ -575,7 +575,7 @@ add_action( 'comment_form_field_comment', 'sitepointbasetheme_comment_form_field
 /**
  * Prints HTML with meta information for current post: author and date
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -658,7 +658,7 @@ if ( ! function_exists( 'sitepointbasetheme_posted_on' ) ) {
 /**
  * Prints HTML with meta information for current post: categories, tags, permalink
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -680,7 +680,7 @@ if ( ! function_exists( 'sitepointbasetheme_entry_meta' ) ) {
 /**
  * Adjusts content_width value for full-width templates and attachments
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -697,7 +697,7 @@ add_action( 'template_redirect', 'sitepointbasetheme_content_width' );
 /**
  * Change the "read more..." link so it links to the top of the page rather than part way down
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @param string The 'Read more' link
  * @return string The link to the post url without the more tag appended on the end
@@ -717,7 +717,7 @@ add_filter( 'the_content_more_link', 'sitepointbasetheme_remove_more_jump_link' 
 /**
  * Returns a "Continue Reading" link for excerpts
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return string The 'Continue reading' link
  */
@@ -731,7 +731,7 @@ if ( ! function_exists( 'sitepointbasetheme_continue_reading_link' ) ) {
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with the sitepointbasetheme_continue_reading_link().
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @param string Auto generated excerpt
  * @return string The filtered excerpt
@@ -746,7 +746,7 @@ add_filter( 'excerpt_more', 'sitepointbasetheme_auto_excerpt_more' );
 /**
  * Return a string containing the footer credits & link
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return string Footer credits & link
  */
@@ -773,7 +773,7 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 /**
  * Outputs the opening container div for WooCommerce
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -787,7 +787,7 @@ if ( ! function_exists( 'sitepointbasetheme_before_woocommerce_wrapper' ) ) {
 /**
  * Outputs the closing container div for WooCommerce
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -801,7 +801,7 @@ if ( ! function_exists( 'sitepointbasetheme_after_woocommerce_wrapper' ) ) {
 /**
  * Check if WooCommerce is active
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -812,7 +812,7 @@ function sitepointbasetheme_is_woocommerce_active() {
 /**
  * Check if WooCommerce is active and a WooCommerce template is in use and output the containing div
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -829,7 +829,7 @@ add_action( 'template_redirect', 'sitepointbasetheme_setup_woocommerce_wrappers'
 /**
  * Outputs the opening wrapper for the WooCommerce content
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -848,7 +848,7 @@ add_action( 'woocommerce_before_main_content', 'sitepointbasetheme_woocommerce_b
 /**
  * Outputs the closing wrapper for the WooCommerce content
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -862,7 +862,7 @@ add_action( 'woocommerce_after_main_content', 'sitepointbasetheme_woocommerce_af
 /**
  * Remove the sidebar from the WooCommerce product page
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -878,7 +878,7 @@ add_action( 'woocommerce_before_main_content', 'sitepointbasetheme_remove_woocom
 /**
  * Set the number of products to display on the WooCommerce shop page
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return void
  */
@@ -892,7 +892,7 @@ add_filter( 'loop_shop_per_page', 'sitepointbasetheme_shop_product_count', 20 );
 /**
  * Filter the WooCommerce pagination so that it matches the theme pagination
  *
- * @since Sitepoint Base Theme 1.0
+ * @since Sitepoint Base 1.0
  *
  * @return array Pagination arguments
  */

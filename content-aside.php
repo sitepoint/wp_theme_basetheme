@@ -2,8 +2,8 @@
 /**
  * The template for displaying posts in the Aside post format
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.0
  */
 ?>
 

@@ -3,8 +3,8 @@
  * The sidebar containing the footer widget areas.
  * If there are no active widgets, the sidebar will be hidden completely.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.0
  */
 ?>
 

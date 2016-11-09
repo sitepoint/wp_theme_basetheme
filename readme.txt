@@ -1,4 +1,4 @@
-=== Sitepoint Base Theme ===
+=== Sitepoint Base ===
 Contributors: ahortin
 Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 4.5
@@ -7,20 +7,20 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Sitepoint Base Theme base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The Sitepoint Base Theme base theme is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder, SiteOrigin Page Builder and the Elementor Page Builder.
+The Sitepoint Base base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The Sitepoint Base base theme is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder, SiteOrigin Page Builder and the Elementor Page Builder.
 
 
 == Description ==
 
-The Sitepoint Base Theme base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple and elegant starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages. This means not only is it flexible, it's extremely easy to customise.
+The Sitepoint Base base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple and elegant starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages. This means not only is it flexible, it's extremely easy to customise.
 
-If you do decide to use a child theme with Sitepoint Base Theme, there's no need to use CSS @import or even enqueue the parent stylesheet. Sitepoint Base Theme will automatically enqueue the parent stylesheet for you. Cool eh!
+If you do decide to use a child theme with Sitepoint Base, there's no need to use CSS @import or even enqueue the parent stylesheet. Sitepoint Base will automatically enqueue the parent stylesheet for you. Cool eh!
 
 Sitepoint's base is a fluid, responsive grid based on percentages. It uses [Normalize](https://github.com/necolas/normalize.css) to make sure that browsers render all elements more consistently and [Modernizr](http://modernizr.com) for detecting HTML5 and CSS3 browser capabilities along with some default stylings from HTML5 Boilerplate. It also incorporates the gorgeous [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icon font by Dave Gandy.
 
 The main navigation uses the standard WordPress menu. Support for dropdown menus is included by default. If you'd like to envoke a button toggle for the main navigation menu on small screens, simply uncomment the two lines from the sitepointbasetheme_scripts_styles() function within functions.php to register and enqueue the necessary javascript file.
 
-If you're looking to build an eCommerce website, Sitepoint Base Theme supports the excellent WooCommerce plugin, straight out of the box.
+If you're looking to build an eCommerce website, Sitepoint Base supports the excellent WooCommerce plugin, straight out of the box.
 
 Templates
 
@@ -34,7 +34,7 @@ All the standard WordPress Post Formats are supported. These include; Aside, Gal
 
 Widgets
 
-Widgets are a great way of adding extra content to your site and Sitepoint Base Theme has a whole assortment of them.
+Widgets are a great way of adding extra content to your site and Sitepoint Base has a whole assortment of them.
 
 Main Sidebar: Appears in the sidebar on posts and pages
 Blog Sidebar: Appears in the sidebar on the blog and archive pages only
@@ -73,21 +73,21 @@ There are three ways to install your theme. It can be installed by manually uplo
 it can be installed by downloading from the WordPress Theme Directory within the Dashboard or it can be installed by uploading the theme zip
 file that you downloaded.
 
-Use the following instructions to install & activate Sitepoint Base Theme using your preferred method.
+Use the following instructions to install & activate Sitepoint Base using your preferred method.
 
 Manual installation:
 
-1. Unzip the files from the Sitepoint Base Theme zip file that you downloaded
-2. Upload the Sitepoint Base Theme folder to your /wp-content/themes/ directory
+1. Unzip the files from the Sitepoint Base zip file that you downloaded
+2. Upload the Sitepoint Base folder to your /wp-content/themes/ directory
 3. Click on the Appearance > Themes menu option in the WordPress Dashboard
-4. Click the Activate link below the Sitepoint Base Theme preview thumbnail
+4. Click the Activate link below the Sitepoint Base preview thumbnail
 
 Install from the WordPress Theme Directory:
 
 1. Click on the Appearance > Themes menu option in the WordPress Dashboard
 2. Click the Install Themes tab at the top of the page
 3. Type 'sitepoint-base-theme' in the search field, without the quotes, and then click the Search button
-4. Click the Install Now link below the Sitepoint Base Theme preview thumbnail
+4. Click the Install Now link below the Sitepoint Base preview thumbnail
 5. Once the theme has been installed, click the Activate link
 
 Install by uploading the theme zip file:
@@ -102,12 +102,12 @@ Install by uploading the theme zip file:
 
 == Getting Started ==
 
-Since Sitepoint Base Theme is a starter theme to kick off your own awesome theme, the first thing you want to do is copy the Sitepoint Base Theme theme folder
+Since Sitepoint Base is a starter theme to kick off your own awesome theme, the first thing you want to do is copy the Sitepoint Base theme folder
 and change the name to something else. You'll then need to do a three-step find and replace on the name in all the templates.
 
-1. Search for Sitepoint Base Theme inside single quotations to capture the text domain.
+1. Search for Sitepoint Base inside single quotations to capture the text domain.
 2. Search for sitepointbasetheme_ to capture all the function names.
-3. Search for Sitepoint Base Theme with a space before it to replace all the occurrences of it in comments.
+3. Search for Sitepoint Base with a space before it to replace all the occurrences of it in comments.
    (You'd replace this with the capitalized version of your theme name.)
 
 or, to put it another way...
@@ -116,7 +116,7 @@ Search for:'sitepoint-base-theme'
  Replace with:'yourawesomethemename'
 Search for:sitepointbasetheme_
  Replace with:yourawesomethemename_
-Search for: Sitepoint Base Theme
+Search for: Sitepoint Base
  Replace with: YourAwesomeThemeName
 
 Lastly, update the stylesheet header in style.css and either update or delete this readme.txt file.
