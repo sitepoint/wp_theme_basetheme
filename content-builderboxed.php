@@ -2,8 +2,8 @@
 /**
  * The template used for displaying page content in page-builderboxed.php
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.3.2
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.3.2
  */
 ?>
 
