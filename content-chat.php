@@ -2,8 +2,8 @@
 /**
  * The template for displaying posts in the Chat post format
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Based
+ * @since Sitepoint Based 1.0
  */
 ?>
 
@@ -12,9 +12,9 @@
 		<?php sitepointbasetheme_posted_on(); ?>
 	</header> <!-- /.entry-header -->
 	<div class="entry-content">
-		<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array( 
-			'span' => array( 
-				'class' => array() ) 
+		<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array(
+			'span' => array(
+				'class' => array() )
 			) ) ); ?>
 		<?php wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sitepoint-base-theme' ),

@@ -4,8 +4,8 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Based
+ * @since Sitepoint Based 1.0
  */
 ?>
 
@@ -17,8 +17,8 @@
 	<div class="entry-content">
 		<?php if ( is_home() && current_user_can( 'edit_posts' ) ) { ?>
 
-			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'sitepoint-base-theme' ), array( 
-				'a' => array( 
+			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'sitepoint-base-theme' ), array(
+				'a' => array(
 					'href' => array() )
 				) ), admin_url( 'post-new.php' ) ); ?></p>
 
