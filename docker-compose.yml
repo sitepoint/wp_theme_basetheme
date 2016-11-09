@@ -7,7 +7,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - .:/var/www/html/wp-content/themes/sitepoint-base-theme
+      - .:/var/www/html/wp-content/themes/sitepoint-base
     environment:
       WORDPRESS_DB_PASSWORD: mDFFPk2CcC9#httUh5F3
 

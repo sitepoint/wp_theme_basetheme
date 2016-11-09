@@ -2,8 +2,8 @@
 /**
  * The template for displaying an archive page for Categories.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Base
+ * @since Sitepoint Base 1.0
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( esc_html__( 'Category Archives: %s', 'sitepoint-base-theme' ), '<span class="cat-archive">' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+					<h1 class="archive-title"><?php printf( esc_html__( 'Category Archives: %s', 'sitepoint-base' ), '<span class="cat-archive">' . single_cat_title( '', false ) . '</span>' ); ?></h1>
 
 					<?php if ( category_description() ) { // Show an optional category description ?>
 						<div class="archive-meta"><?php echo category_description(); ?></div>
