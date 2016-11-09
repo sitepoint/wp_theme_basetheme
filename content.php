@@ -2,8 +2,8 @@
 /**
  * The default template for displaying content. Used for both single and index/archive/search.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Based
+ * @since Sitepoint Based 1.0
  */
 ?>
 

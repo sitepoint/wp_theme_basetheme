@@ -2,8 +2,8 @@
 /**
  * The template for displaying an archive page for Categories.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Based
+ * @since Sitepoint Based 1.0
  */
 
 get_header(); ?>

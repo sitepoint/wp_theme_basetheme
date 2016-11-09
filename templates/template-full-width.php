@@ -5,8 +5,8 @@
  * Description: Displays a full-width page, with no sidebar. This template is great for pages
  * containing large amounts of content.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Based
+ * @since Sitepoint Based 1.0
  */
 
 get_header(); ?>

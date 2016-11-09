@@ -7,8 +7,8 @@
  * handled by a callback to sitepointbasetheme_comment() which is
  * located in the functions.php file.
  *
- * @package Sitepoint Base Theme
- * @since Sitepoint Base Theme 1.0
+ * @package Sitepoint Based
+ * @since Sitepoint Based 1.0
  */
 
 /*
