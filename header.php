@@ -37,7 +37,7 @@
 
 <div id="wrapper" class="hfeed site">
 
-	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'sitepoint-base-theme' ); ?>"><?php esc_html_e( 'Skip to main content', 'sitepoint-base-theme' ); ?></a></div>
+	<div class="visuallyhidden skip-link"><a href="#primary"><?php esc_html_e( 'Skip to main content', 'sitepoint-base-theme' ); ?></a></div>
 
 	<div id="headercontainer">
 
@@ -49,7 +49,7 @@
 			<div class="grid-60 tablet-grid-60">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'sitepoint-base-theme' ); ?></h3>
-					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'sitepoint-base-theme' ); ?>"><?php esc_html_e( 'Skip to content', 'sitepoint-base-theme' ); ?></a></div>
+					<div class="assistive-text skip-link"><a href="#content"><?php esc_html_e( 'Skip to content', 'sitepoint-base-theme' ); ?></a></div>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav> <!-- /.site-navigation.main-navigation -->
 			</div> <!-- /.grid-60 -->

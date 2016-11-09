@@ -30,9 +30,9 @@
 		</p>
 		<div class="author-link">
 			<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( wp_kses( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array( 
-					'span' => array( 
-						'class' => array() ) 
+				<?php printf( wp_kses( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'sitepoint-base-theme' ), array(
+					'span' => array(
+						'class' => array() )
 				) ), get_the_author() ); ?>
 			</a>
 		</div> <!-- /.author-link	-->
