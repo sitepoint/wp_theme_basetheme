@@ -1790,14 +1790,14 @@ li span.dots {
 	content: " \f054";
 }
 
-.main-navigation ul a {
-	padding: 0; /* Padding around each top level menu option (if needed) */
-}
+/*.main-navigation ul a {
+	padding: 0; /* Padding around each top level menu option (if needed)
+}*/
 
-.main-navigation ul ul a {
-	padding: 0 5px; /* Padding around each dropdown menu option */
+/*.main-navigation ul ul a {
+	padding: 0 5px; /* Padding around each dropdown menu option
 	padding: 0 0.3125rem;
-}
+}*/
 
 .main-small-navigation a, .main-navigation a {
 	display: block;
@@ -1805,28 +1805,8 @@ li span.dots {
 	color: #3a3a3a; /* Nav bar link color */
 }
 
-.main-navigation ul ul {
-	display: none;
-	position: absolute;
-	left: 0;
-	z-index: 99999;
-	line-height: 1.7;
-	background-color: #3a3a3a; /* Nav bar dropdown background color */
-	-webkit-box-shadow:2px 2px 5px 0px rgba(0, 0, 0, 0.6);
-	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
-}
-
-.main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
-}
-
 .main-navigation ul ul a {
 	color: #fff; /* Nav bar dropdown link color */
-	width: 11em; /* Nav bar dropdown width */
-}
-
-.main-navigation ul ul li {
 }
 
 .main-navigation li:hover > a {
@@ -1842,49 +1822,264 @@ li span.dots {
 	color: #339bcb; /* Nav bar dropdown link color on hover */
 }
 
-.main-navigation ul li:hover > ul {
-	display: block;
-}
+/* mobile menu */
+/* hide close buttons when closed so they wont show up in tabindex */
+.rm-closed {
+  display: none; }
 
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
-}
+/* Accessible hide the menu itself */
+ul.rm-closed {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
 
-.main-navigation .current-menu-item > a,
-.main-navigation .current-menu-ancestor > a,
-.main-navigation .current_page_item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current_page_parent > a {
-	color: #339bcb; /* Nav bar link color for current menu item or ancestor */
-}
+/* Mobile indicator styling */
+#rm-mobile-indicator {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  z-index: 0; }
+  @media (min-width: 600px) {
+    #rm-mobile-indicator {
+      z-index: 1; } }
 
-.main-navigation ul .divider {
-    border-bottom: 1px solid #aaa;
-    height: 0;
-    line-height: 0.0625;
+/**
+ * When JS is enabled
+ *
+ * 1. We can use display none because we set display block again with JS immediately after initiating the menu
+ * 2. Display menu when initiated
+ * 3. Display menu on "desktop"
+ * 4. Display focused items
+ */
+.js .navigation_container {
+  display: none;
+  /* 1 */ }
+  .js .navigation_container.rm-initiated {
+    display: block;
+    /* 2 */ }
+  @media (min-width: 600px) {
+    .js .navigation_container {
+      display: block;
+      /* 3 */ } }
+  .js .navigation_container .rm-focused {
+    overflow: visible;
+    /* 4 */ }
+
+
+.rm-togglebutton { display:none; }
+
+.rm-subtoggle {
+  margin: 5px;
+  padding: 3px 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(51, 51, 51, 0.1);
+  color: #0072B3;
+  font-size: 1em;
+  cursor: pointer; }
+  .rm-togglebutton:hover,
+  .rm-subtoggle:hover {
+    text-decoration: underline; }
+  .rm-togglebutton:focus,
+  .rm-subtoggle:focus {
+    text-decoration: underline; }
+
+.rm-subtoggle {
+  margin: 5px;
+  float: right; }
+
+.navigation_container {
+  background: transparent;
+  color: #fff;
+  min-height: 40px; }
+  .navigation_container ul {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none; }
+    @media (min-width: 600px) {
+      .navigation_container ul {
+        height: 40px; } }
+  .navigation_container ul:before,
+  .navigation_container ul:after {
+    display: table;
+    content: " "; }
+  .navigation_container ul:after {
+    clear: both; }
+  .navigation_container .rm-closed li.rm-parent > a:after,
+  .navigation_container .rm-fullmenu li.rm-parent > a:after {
+    content: " \25bc"; }
+  .navigation_container .rm-closed li.parent > a:after,
+  .navigation_container .rm-fullmenu li.parent > a:after {
+    content: " \25b6"; }
+  .navigation_container li {
+    padding: 0; }
+    @media (min-width: 600px) {
+      .navigation_container li {
+        height: 40px;
+        float: left; } }
+    .navigation_container li.focused, .navigation_container li:hover a,
+    .navigation_container li a:hover,
+    .navigation_container li a:focus {
+      background: transparent; }
+  .navigation_container .rm-opened li {
+    float: none; }
+  .navigation_container a {
+    display: block;
+    color: #3a3a3a;
+    padding: 8px 16px;
+    line-height: 24px;
+    text-decoration: none;
+    height: 40px; }
+    .navigation_container a:after {
+      font-size: 12px;
+      vertical-align: middle;
+      line-height: 24px;
+      text-decoration: none; }
+  .navigation_container .active a,
+  .navigation_container .active a:hover,
+  .navigation_container .active a:focus {
+    background: #fff;
+    color: #333;
+    cursor: default; }
+  .navigation_container .rm-closed li,
+  .navigation_container .rm-fullmenu li {
+    overflow: visible; }
+    .navigation_container .rm-closed li ul,
+    .navigation_container .rm-fullmenu li ul {
+      height: auto;
+      background: #3a3a3a;
+      padding: 0;
+      width: 180px;
+      border-top: none; }
+      @media (min-width: 600px) {
+        .navigation_container .rm-closed li ul,
+        .navigation_container .rm-fullmenu li ul {
+          transition: transform 0.1s cubic-bezier(0.195, 0.4, 0.45, 0.785);
+          transform: scaleY(0);
+          transform-origin: 0 0; } }
+    .navigation_container .rm-closed li.rm-focused > ul, .navigation_container .rm-closed li:hover > ul,
+    .navigation_container .rm-fullmenu li.rm-focused > ul,
+    .navigation_container .rm-fullmenu li:hover > ul {
+      display: block; }
+      @media (min-width: 600px) {
+        .navigation_container .rm-closed li.rm-focused > ul, .navigation_container .rm-closed li:hover > ul,
+        .navigation_container .rm-fullmenu li.rm-focused > ul,
+        .navigation_container .rm-fullmenu li:hover > ul {
+          transform: scaleY(1); } }
+    @media (min-width: 600px) {
+      .navigation_container .rm-closed li.rm-focused li ul, .navigation_container .rm-closed li:hover li ul,
+      .navigation_container .rm-fullmenu li.rm-focused li ul,
+      .navigation_container .rm-fullmenu li:hover li ul {
+        transform: scaleX(0); } }
+    @media (min-width: 600px) {
+      .navigation_container .rm-closed li.rm-focused li.rm-focused > ul, .navigation_container .rm-closed li.rm-focused li:hover > ul, .navigation_container .rm-closed li:hover li.rm-focused > ul, .navigation_container .rm-closed li:hover li:hover > ul,
+      .navigation_container .rm-fullmenu li.rm-focused li.rm-focused > ul,
+      .navigation_container .rm-fullmenu li.rm-focused li:hover > ul,
+      .navigation_container .rm-fullmenu li:hover li.rm-focused > ul,
+      .navigation_container .rm-fullmenu li:hover li:hover > ul {
+        transform: scaleX(1); } }
+    .navigation_container .rm-closed li li,
+    .navigation_container .rm-fullmenu li li {
+      float: none; }
+      .navigation_container .rm-closed li li.rm-focused > a, .navigation_container .rm-closed li li:hover > a,
+      .navigation_container .rm-closed li li a:hover,
+      .navigation_container .rm-closed li li a:focus,
+      .navigation_container .rm-fullmenu li li.rm-focused > a,
+      .navigation_container .rm-fullmenu li li:hover > a,
+      .navigation_container .rm-fullmenu li li a:hover,
+      .navigation_container .rm-fullmenu li li a:focus {
+        text-decoration: none;
+        background: #fff;
+        color: #339bcb; }
+
+/**
+ * When JS is enabled
+ *
+ * 1. We can use display none because we set display block again with JS immediately after initiating the menu
+ * 2. Display menu when initiated
+ * 3. Display menu on "desktop"
+ * 4. Display focused items
+ */
+.js .navigation_container {
+  display: none;
+  /* 1 */ }
+
+.js .navigation_container.rm-initiated {
+  display: block;
+  /* 2 */ }
+
+@media (min-width: 600px) {
+  .js .navigation_container {
+    display: block;
+    /* 3 */ } }
+.js .navigation_container .rm-focused {
+  overflow: visible;
+  /* 4 */ }
+
+/**
+ * When JS is either disabled or enabled
+ *
+ * 1. Relative to position li > ul items
+ * 2. Hide overflowing content so we can display on tabbing
+ * 3. Display on hover / focus
+ * 4. Children should have position absolute to hide them
+ */
+.navigation_container li {
+  position: relative;
+  /* 1 */ }
+
+@media (min-width: 600px) {
+  .navigation_container li {
     overflow: hidden;
-}
+    /* 2 */ }
 
-.main-navigation ul li.dropdown-header a,
-.main-navigation ul li.current-menu-item ul .dropdown-header a {
-	color: #aaa; /* Nav bar dropdown header color */
-	background-color: #3a3a3a; /* Nav bar dropdown header background color */
-}
+  .navigation_container li:hover, .navigation_container li:focus {
+    overflow: visible;
+    /* 3 */ } }
+@media (min-width: 600px) {
+  .navigation_container li ul {
+    position: absolute;
+    /* 4 */ } }
+.navigation_container {
+  position: relative;
+  z-index: 1; }
 
-/* Small menu toggle for mobile devices */
-.menu-toggle {
-	cursor: pointer;
-}
+@media (min-width: 600px) {
+  .navigation_container li ul {
+    position: absolute;
+    left: -9999px;
+    top: 100%;
+    z-index: -1;
+    width: 100%; } }
 
-.main-small-navigation .nav-menu {
-	display: none;
-	font-size: 16px;
-}
+.navigation_container li li {
+  position: relative;
+  float: left; }
 
-.main-small-navigation ul a {
-	padding: 5px 0;
-	padding: .3125rem 0; /* Padding around each top level menu option (if needed) */
-}
+.navigation_container .rm-focused > ul,
+.navigation_container li:hover > ul {
+  left: 0; }
+
+.navigation_container li .rm-focused > ul,
+.navigation_container li li:hover > ul {
+  left: -100%;
+  top: 0; }
+
+/* mobile menu end*/
+
+
 
 /* ==========================================================================
    WPML translation plugin
@@ -2091,9 +2286,6 @@ h1.page-title {
 		margin-top: 0;
 		float: none;
 	}
-	.main-navigation .nav-menu > li:first-child {
-		margin-left: 0;
-	}
 	.widget-area {
 		margin-top: 32px;
 		margin-top: 2rem;
@@ -2146,36 +2338,7 @@ h1.page-title {
 	.site-title h1 {
 		text-align: center;
 	}
-	.main-small-navigation .nav-menu,
-	.main-small-navigation .nav-menu ul,
-	.nav-menu,
-	.nav-menu ul {
-		padding: 0;
-	}
-	.main-small-navigation,
-	.main-navigation li {
-		width: 100%;
-	}
-	.main-small-navigation {
-		text-align: center;
-	}
-	.main-small-navigation ul li,
-	.main-navigation ul li {
-		background-color: #fff;
-		margin: 5px 0;
-		text-align: center;
-	}
-	.main-navigation ul ul, .main-navigation ul ul li ul {
-		position: relative;
-	}
-	.main-navigation ul ul li ul {
-		left: 0;
-	}
-	.main-navigation ul ul a {
-		color: #fff; /* Nav bar dropdown link color */
-		background-color: #3a3a3a;  /* Nav bar dropdown background color */
-		width: 100%; /* Nav bar dropdown width */
-	}
+
 	.header-meta .publish-date,
 	.header-meta .publish-author,
 	.header-meta .post-categories,
@@ -2200,6 +2363,18 @@ h1.page-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
+
+	.main-navigation ul ul a, .main-navigation li:hover > a {
+	color:#3a3a3a;
+	}
+
+	.navigation_container .rm-opened li {
+		border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+	}
+
+	.main-navigation li {
+		margin:0;
+	}
 }
 
 @media only screen and (max-width: 320px) {
@@ -2208,7 +2383,6 @@ h1.page-title {
 		width: 100%;
 	}
 }
-
 
 /* ==========================================================================
    Non-semantic helper classes from HTML5 Boilerplate
@@ -2255,36 +2429,4 @@ h1.page-title {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
-}
-
-
-/*mobile menu added style*/
-@media screen and (max-width:519px){
-
-	nav ul.sub-menu {
-		display:none
-	}
-
-	.nav-menu li {
-			text-align: left !important;
-	}
-
-	.arrow-down, .arrow-down-open, .arrow-down-close {
-		cursor: pointer;
-		position: absolute;
-		right: 6%;
-		margin-top: 8px;
-	}
-
-	ul.sub-menu li {
-			background: #ebe9eb;
-			padding: 0px 5px;
-	}
-
-	ul.sub-menu li li {
-			background: #ccc;
-			padding: 0px 17px;
-			margin: 0 -5px;
-	}
-
 }
