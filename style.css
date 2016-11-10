@@ -1806,7 +1806,7 @@ li span.dots {
 }
 
 .main-navigation ul ul a {
-	color: #339bcb; /* Nav bar dropdown link color */
+	color: #fff; /* Nav bar dropdown link color */
 }
 
 .main-navigation li:hover > a {
@@ -1948,8 +1948,8 @@ li span.dots {
       .navigation_container .rm-fullmenu li li a:hover,
       .navigation_container .rm-fullmenu li li a:focus {
         text-decoration: none;
-        background: #339bcb;
-        color: white; }
+        background: #fff;
+        color: #339bcb; }
 
 /**
  * When JS is enabled
