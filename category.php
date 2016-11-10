@@ -16,11 +16,10 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( esc_html__( 'Category Archives: %s', 'sitepoint-base' ), '<span class="cat-archive">' . single_cat_title( '', false ) . '</span>' ); ?></h1>
-
-					<?php if ( category_description() ) { // Show an optional category description ?>
-						<div class="archive-meta"><?php echo category_description(); ?></div>
-					<?php } ?>
+					<?php
+					the_archive_title( '<h1 class="archive-title">', '</h1>' );
+					the_archive_description( '<div class="archive-meta">', '</div>' );
+					?>
 				</header>
 
 				<?php // Start the Loop ?>

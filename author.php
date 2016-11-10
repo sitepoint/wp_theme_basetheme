@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying an archive page for Categories.
+ * The template for displaying an archive page for Authors.
  *
  * @package Sitepoint Base
  * @since Sitepoint Base 1.0
@@ -22,7 +22,9 @@ get_header(); ?>
 				?>
 
 				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'sitepoint-base' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
+					<?php
+					the_archive_title( '<h1 class="archive-title">', '</h1>' );
+					?>
 				</header><!-- .archive-header -->
 
 				<?php // If a user has filled out their description, show a bio on their entries.
