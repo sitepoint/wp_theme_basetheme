@@ -352,19 +352,14 @@ if ( ! function_exists( 'sitepointbase_scripts_styles' ) ) {
 		 * Register and enqueue our scripts
 		 */
 
-		// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
-		wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-min.js', array(), '3.3.1', false );
 
 		// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		// Load our a dependency script for responsive menu.
-		wp_enqueue_script( 'sitepoint-base-apollo', trailingslashit( get_template_directory_uri() ) . 'js/apollo.min.js', array(), '1.0.0', false );
-
 		//vanilla javascript to create the responsive menu.
-		wp_enqueue_script( 'sitepoint-base-responsive-menu', trailingslashit( get_template_directory_uri() ) . 'js/responsive-menu.min.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'sitepoint-base-vendors', trailingslashit( get_template_directory_uri() ) . 'js/vendors.min.js', array(), '1.0.0', false );
 
 	}
 }
