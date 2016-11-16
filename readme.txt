@@ -121,23 +121,27 @@ Lastly, update the stylesheet header in style.css and either update or delete th
 
 == License ==
 
-Sitepoint is licensed under the [GNU General Public License version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+SitePoint is licensed under the [GNU General Public License version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the
-Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
 
 == Credits ==
 
-Sitepoint utilises the following awesomeness:
+SitePoint Base is packed full of the following wholesome goodness:
 
-[Unsemantic](http://unsemantic.com), which is licensed under GPL and MIT license
-[Modernizr](http://modernizr.com), which is licensed under the MIT license
-[Normalize.css](https://github.com/necolas/normalize.css), which is licensed under the MIT license
-[jQuery Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation) which is dual licensed under the MIT license and GPL licenses
-[Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
-[Open Sans font](https://fonts.google.com/specimen/Open+Sans), which is licensed under Apache License Version 2.0
-[Dosis](https://fonts.google.com/specimen/Dosis), which is licensed under SIL Open Font License 1.1
+- [Unsemantic](http://unsemantic.com), which is licensed under GPL and MIT license
+- [Modernizr](http://modernizr.com), which is licensed under the MIT license
+- [Normalize.css](https://github.com/necolas/normalize.css), which is licensed under the MIT license
+- [jQuery Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation) which is dual licensed under the MIT license and GPL licenses
+
+
+
+SitePoint Base includes the following awesomeness:
+
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
+- [Open Sans font](https://fonts.google.com/specimen/Open+Sans), which is licensed under Apache License Version 2.0
+- [Dosis](https://fonts.google.com/specimen/Dosis), which is licensed under SIL Open Font License 1.1
 
 
 == Changelog ==
