@@ -1,0 +1,262 @@
+# Copyright (C) 2016 sitepoint-base
+# This file is distributed under the same license as the sitepoint-base package.
+msgid ""
+msgstr ""
+"Project-Id-Version: sitepoint-base\n"
+"Report-Msgid-Bugs-To: https://sitepoint.com/premium\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Anthony Hortin <support@maddisondesigns.com>\n"
+"Language-Team: Maddison Designs <support@maddisondesigns.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:18
+msgid "Uh Oh! This is somewhat embarrassing!"
+msgstr ""
+
+#: 404.php:21, no-results.php:32
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: author-bio.php:15
+msgid "About %s"
+msgstr ""
+
+#: author-bio.php:33
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: comments.php:30
+msgid "One response on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:41
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:42
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:43
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:49
+msgid "Comments are closed."
+msgstr ""
+
+#: content-aside.php:15, content-audio.php:24, content-chat.php:15, content-gallery.php:23, content-image.php:15, content-link.php:15, content-quote.php:16, content-status.php:15, content-video.php:23, content.php:47, content.php:51, functions.php:673
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:20, content-audio.php:29, content-builderboxed.php:14, content-chat.php:20, content-gallery.php:28, content-image.php:20, content-link.php:20, content-page.php:22, content-postarchives.php:33, content-quote.php:23, content-status.php:19, content-video.php:28, content.php:57
+msgid "Pages:"
+msgstr ""
+
+#: content-aside.php:32, content-audio.php:42, content-chat.php:32, content-gallery.php:40, content-image.php:32, content-link.php:32, content-page.php:29, content-postarchives.php:36, content-quote.php:35, content-status.php:31, content-video.php:40, content.php:70, functions.php:465
+msgid "Edit"
+msgstr ""
+
+#: content-postarchives.php:19
+msgid "Archives by Category"
+msgstr ""
+
+#: content-postarchives.php:28
+msgid "Archives by Month"
+msgstr ""
+
+#: content-video.php:17, content.php:31
+msgid "Permalink to "
+msgstr ""
+
+#: content.php:13
+msgid "Featured post"
+msgstr ""
+
+#: functions.php:59
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:151
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:156
+msgctxt "Open Sans font: add new subset (cyrillic)"
+msgid "no-subset"
+msgstr ""
+
+#: functions.php:165
+msgctxt "Dosis font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:222
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:224
+msgid "Appears in the sidebar on all posts and pages"
+msgstr ""
+
+#: functions.php:232
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:234
+msgid "Appears in the sidebar on the blog and archive pages only"
+msgstr ""
+
+#: functions.php:242
+msgid "Single Post Sidebar"
+msgstr ""
+
+#: functions.php:244
+msgid "Appears in the sidebar on single posts only"
+msgstr ""
+
+#: functions.php:252
+msgid "Page Sidebar"
+msgstr ""
+
+#: functions.php:254
+msgid "Appears in the sidebar on pages only"
+msgstr ""
+
+#: functions.php:262
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: functions.php:264, functions.php:274, functions.php:284, functions.php:294
+msgid "Appears in the footer sidebar"
+msgstr ""
+
+#: functions.php:272
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: functions.php:282
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: functions.php:292
+msgid "Fourth Footer Widget Area"
+msgstr ""
+
+#: functions.php:434
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:434
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:449
+msgid "Post author"
+msgstr ""
+
+#: functions.php:454
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:460
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:469
+msgid "Reply <span>&darr;</span>"
+msgstr ""
+
+#: functions.php:493
+msgid "Name"
+msgstr ""
+
+#: functions.php:495
+msgid "Email"
+msgstr ""
+
+#: functions.php:497
+msgid "Website"
+msgstr ""
+
+#: functions.php:517
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: functions.php:583, functions.php:617
+msgid " "
+msgstr ""
+
+#: functions.php:588
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:588
+msgid "No Comments"
+msgstr ""
+
+#: functions.php:592
+msgid "<div class=\"header-meta\">%1$s%2$s<span class=\"post-categories\">%3$s</span>%4$s</div>"
+msgstr ""
+
+#: functions.php:622
+msgid "<i class=\"fa fa-tag\" aria-hidden=\"true\"></i> %1$s"
+msgstr ""
+
+#: functions.php:704
+msgid "Proudly powered by"
+msgstr ""
+
+#: functions.php:705
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: functions.php:706
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:847
+msgid "<i class=\"fa fa-angle-left\"></i> Previous"
+msgstr ""
+
+#: functions.php:849
+msgid "Next <i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: header.php:40
+msgid "Skip to main content"
+msgstr ""
+
+#: header.php:52
+msgid "Skip to content"
+msgstr ""
+
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:27
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
