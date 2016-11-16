@@ -359,24 +359,12 @@ if ( ! function_exists( 'sitepointbase_scripts_styles' ) ) {
 		}
 
 		//vanilla javascript to create the responsive menu.
-		wp_enqueue_script( 'sitepoint-base-vendors', trailingslashit( get_template_directory_uri() ) . 'js/vendors.min.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'sitepoint-base-vendors', trailingslashit( get_template_directory_uri() ) . 'js/vendors.min.js', array('jquery'), '1.0.0', false );
 
 	}
 }
 add_action( 'wp_enqueue_scripts', 'sitepointbase_scripts_styles' );
 
-
-//function to load the responsive menu necessary to load in the footer
-function scipts_function() {
-   echo '<script type="text/javascript">
-    responsivemenu.init({
-        wrapper: document.querySelector(".navigation_container"),
-				onAfterInit: function() {
-				}
-    });
-</script>';
-}
-add_action( 'wp_footer', 'scipts_function' );
 
 /**
  * Displays the optional custom logo. If no logo is available, it displays the Site Title
