@@ -12,20 +12,20 @@
 			<?php
 			do_action( 'sitepointbase_before_sidebar' );
 
-			if ( is_active_sidebar( 'sidebar-main' ) ) {
-				dynamic_sidebar( 'sidebar-main' );
+			if ( is_active_sidebar( 'sidebar-1' ) ) {
+				dynamic_sidebar( 'sidebar-1' );
 			}
 
-			if ( ( is_home() || is_archive() ) && is_active_sidebar( 'sidebar-blog' ) ) {
-				dynamic_sidebar( 'sidebar-blog' );
+			if ( ( is_home() || is_archive() ) && is_active_sidebar( 'sidebar-2' ) ) {
+				dynamic_sidebar( 'sidebar-2' );
 			}
 
-			if ( is_single() && is_active_sidebar( 'sidebar-single' ) ) {
-				dynamic_sidebar( 'sidebar-single' );
+			if ( is_single() && is_active_sidebar( 'sidebar-3' ) ) {
+				dynamic_sidebar( 'sidebar-3' );
 			}
 
-			if ( is_page() && is_active_sidebar( 'sidebar-page' ) ) {
-				dynamic_sidebar( 'sidebar-page' );
+			if ( is_page() && is_active_sidebar( 'sidebar-4' ) ) {
+				dynamic_sidebar( 'sidebar-4' );
 			}
 			?>
 
