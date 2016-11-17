@@ -260,7 +260,7 @@ if ( ! function_exists( 'sitepointbase_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'First Footer Widget Area', 'sitepoint-base' ),
-				'id' => 'sidebar-5',
+				'id' => 'sidebar-footer1',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -270,7 +270,7 @@ if ( ! function_exists( 'sitepointbase_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Second Footer Widget Area', 'sitepoint-base' ),
-				'id' => 'sidebar-6',
+				'id' => 'sidebar-footer2',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -280,7 +280,7 @@ if ( ! function_exists( 'sitepointbase_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Third Footer Widget Area', 'sitepoint-base' ),
-				'id' => 'sidebar-7',
+				'id' => 'sidebar-footer3',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
@@ -290,7 +290,7 @@ if ( ! function_exists( 'sitepointbase_widgets_init' ) ) {
 
 		register_sidebar( array(
 				'name' => esc_html__( 'Fourth Footer Widget Area', 'sitepoint-base' ),
-				'id' => 'sidebar-8',
+				'id' => 'sidebar-footer4',
 				'description' => esc_html__( 'Appears in the footer sidebar', 'sitepoint-base' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget' => '</aside>',
