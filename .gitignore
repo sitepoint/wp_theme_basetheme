@@ -1,5 +1,9 @@
 *.ds_store
 ._*
+
 # NPM #
 ##########
 node_modules
+
+# Dist Folder #
+dist

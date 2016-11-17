@@ -32,6 +32,8 @@
 var project                 = 'Sitepoint Base'; // Project Name.
 var projectURL              = 'localhost:8080'; // Project URL. Could be something like localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
+var themeFolder             = 'sitepoint-base';
+var distFolder             = './dist/';
 
 // Translation related.
 var text_domain             = 'sitepoint-base'; // Your textdomain here.
@@ -118,6 +120,8 @@ var browserSync  = require('browser-sync').create(); // Reloads browser and inje
 var reload       = browserSync.reload; // For manual browser reload.
 var wpPot        = require('gulp-wp-pot'); // For generating the .pot file.
 var sort         = require('gulp-sort'); // Recommended to prevent unnecessary changes in pot-file.
+var zip          = require('gulp-zip');
+var clean        = require('gulp-clean');
 
 /**
  * Task: `browser-sync`.
@@ -309,6 +313,19 @@ gulp.task( 'browser-sync', function() {
         .pipe(gulp.dest(translatePath))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
+ });
+
+ gulp.task( 'clean', function() {
+   return gulp.src('dist', {read: false})
+    .pipe(clean())
+    .pipe( notify( { message: 'TASK: "Clean" Completed! 💯', onLast: true } ) );
+ })
+
+ gulp.task( 'build', ['clean'],  function() {
+   return gulp.src(['./**', '!node_modules/**', '!gulpfile.js', '!package.json'])
+    .pipe(zip(themeFolder+'.zip'))
+    .pipe(gulp.dest(distFolder))
+    .pipe(notify( { message: 'TASK: "Dist" Completed! 💯', onLast: true } ));
  });
 
 
