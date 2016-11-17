@@ -321,7 +321,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( notify( { message: 'TASK: "Clean" Completed! 💯', onLast: true } ) );
  })
 
- gulp.task( 'build', ['clean'],  function() {
+ gulp.task( 'build', ['clean', 'styles', 'vendorsJs', 'customJS', 'images'],  function() {
    return gulp.src(['./**', '!node_modules/**', '!gulpfile.js', '!package.json'])
     .pipe(zip(themeFolder+'.zip'))
     .pipe(gulp.dest(distFolder))
