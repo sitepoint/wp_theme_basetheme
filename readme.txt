@@ -148,3 +148,7 @@ SitePoint Base includes the following awesomeness:
 
 = 1.0 =
 - Initial version
+
+= 1.1 =
+- Add post type templates
+- Update the pot file and remove old one

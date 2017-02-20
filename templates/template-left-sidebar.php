@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Left Sidebar Page
- *
+ * Template Post Type: post, page
  * Description: Displays a page with a left hand sidebar.
  *
  * @package Sitepoint Base
