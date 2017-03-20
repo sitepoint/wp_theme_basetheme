@@ -46,6 +46,7 @@ body {
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
+	background: #fff;
 	color: #3a3a3a;
 	text-align: left;
 }
@@ -1817,7 +1818,7 @@ li span.dots {
 }
 
 .main-navigation ul ul ul {
-	left: 100%;
+	left: -100%;
 	top: 0;
 }
 
