@@ -316,15 +316,7 @@ if ( ! function_exists( 'sitepointbase_scripts_styles' ) ) {
 		 */
 
 		// Start off with a clean base by using normalise.
-		wp_enqueue_style( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '4.1.1', 'all' );
-
-		// Register and enqueue our icon font
-		// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-		wp_enqueue_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array( 'normalize' ), '4.6.3', 'all' );
-
-		// Our styles for setting up the grid. We're using Unsemantic. http://unsemantic.com
-		wp_enqueue_style( 'unsemanticgrid', trailingslashit( get_template_directory_uri() ) . 'css/unsemantic.css' , array( 'fontawesome' ), '1.0.0', 'all' );
-
+		wp_enqueue_style( 'vendor-css', trailingslashit( get_template_directory_uri() ) . 'css/vendors.min.css' , array(), '4.1.1', 'all' );
 		/*
 		 * Load our Google Fonts.
 		 *

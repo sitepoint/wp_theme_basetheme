@@ -50,6 +50,12 @@ var styleDestination        = './'; // Path to place the compiled CSS file.
 // Defualt set to root folder.
 
 // JS Vendor related.
+var cssVendorSRC             = './css/vendor/*.css'; // Path to JS vendor folder.
+var cssVendorDestination     = './css/'; // Path to place the compiled JS vendors file.
+var cssVendorFile            = 'vendors'; // Compiled JS vendors file name.
+// Default set to vendors i.e. vendors.js.
+
+// JS Vendor related.
 var jsVendorSRC             = './js/vendor/*.js'; // Path to JS vendor folder.
 var jsVendorDestination     = './js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
@@ -68,6 +74,7 @@ var imagesDestination       = './img/'; // Destination folder of optimized image
 // Watch files paths.
 var styleWatchFiles         = './css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './js/vendor/*.js'; // Path to all vendor JS files.
+var vendorCssWatchFiles      = './css/vendor/*.css'; // Path to all vendor JS files.
 var customJSWatchFiles      = './js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
 
@@ -102,6 +109,7 @@ var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation.
 var minifycss    = require('gulp-uglifycss'); // Minifies CSS files.
 var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
 var mmq          = require('gulp-merge-media-queries'); // Combine matching media queries into one media query definition.
+var concatCss    = require('gulp-concat-css');
 
 // JS related plugins.
 var concat       = require('gulp-concat'); // Concatenates JS files
@@ -221,6 +229,33 @@ gulp.task( 'browser-sync', function() {
   *     3. Renames the JS file with suffix .min.js
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
+ gulp.task( 'vendorsCss', function() {
+  gulp.src( cssVendorSRC )
+    .pipe( concatCss( cssVendorFile + '.css' ) )
+    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+    .pipe( gulp.dest( cssVendorDestination ) )
+    .pipe( rename( {
+      basename: cssVendorFile,
+      suffix: '.min'
+    }))
+    .pipe( minifycss() )
+    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+    .pipe( gulp.dest( cssVendorDestination ) )
+    .pipe( notify( { message: 'TASK: "vendorsCss" Completed! 💯', onLast: true } ) );
+ });
+
+
+ /**
+  * Task: `vendorJS`.
+  *
+  * Concatenate and uglify vendor JS scripts.
+  *
+  * This task does the following:
+  *     1. Gets the source folder for JS vendor files
+  *     2. Concatenates all the files and generates vendors.js
+  *     3. Renames the JS file with suffix .min.js
+  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
+  */
  gulp.task( 'vendorsJs', function() {
   gulp.src( jsVendorSRC )
     .pipe( concat( jsVendorFile + '.js' ) )
@@ -321,7 +356,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( notify( { message: 'TASK: "Clean" Completed! 💯', onLast: true } ) );
  })
 
- gulp.task( 'build', ['clean', 'styles', 'vendorsJs', 'customJS', 'images'],  function() {
+ gulp.task( 'build', ['clean', 'styles', 'vendorsCss', 'vendorsJs', 'customJS', 'images'],  function() {
    return gulp.src(['./**', '!node_modules/**', '!gulpfile.js', '!package.json'])
     .pipe(zip(themeFolder+'.zip'))
     .pipe(gulp.dest(distFolder))
@@ -334,9 +369,10 @@ gulp.task( 'browser-sync', function() {
   *
   * Watches for file changes and runs specific tasks.
   */
- gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
+ gulp.task( 'default', ['styles', 'vendorsCss', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
   gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
   gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
+  gulp.watch( vendorCssWatchFiles, [ 'vendorsCss', reload ] ); // Reload on vendorsCss file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
  });
