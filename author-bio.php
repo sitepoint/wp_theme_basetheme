@@ -13,19 +13,19 @@
 	</div> <!-- /.author-avatar -->
 	<div class="author-description">
 		<h2><?php printf( esc_html__( 'About %s', 'sitepoint-base' ), get_the_author() ); ?></h2>
-		<p><?php the_author_meta( 'description' ); ?></p>
+		<p><?php echo wp_kses( get_the_author_meta( 'description' ) ); ?></p>
 		<p class="social-meta">
 			<?php if ( get_the_author_meta( 'url' ) ) { ?>
-				<a href="<?php the_author_meta( 'url' ) ?>" title="Website"><i class="fa fa-link fa-fw"></i></a>
+				<a href="<?php echo esc_url( get_the_author_meta( 'url' ) ); ?>" title="Website"><i class="fa fa-link fa-fw"></i></a>
 			<?php } ?>
 			<?php if ( get_the_author_meta( 'twitter' ) ) { ?>
-				<a href="<?php the_author_meta( 'twitter' ) ?>" title="Twitter"><i class="fa fa-twitter fa-fw"></i></a>
+				<a href="<?php echo esc_url( get_the_author_meta( 'twitter' ) ); ?>" title="Twitter"><i class="fa fa-twitter fa-fw"></i></a>
 			<?php } ?>
 			<?php if ( get_the_author_meta( 'facebook' ) ) { ?>
-				<a href="<?php the_author_meta( 'facebook' ) ?>" title="Facebook"><i class="fa fa-facebook fa-fw"></i></a>
+				<a href="<?php echo esc_url( get_the_author_meta( 'facebook' ) ); ?>" title="Facebook"><i class="fa fa-facebook fa-fw"></i></a>
 			<?php } ?>
 			<?php if ( get_the_author_meta( 'googleplus' ) ) { ?>
-				<a href="<?php the_author_meta( 'googleplus' ) ?>" title="Google+"><i class="fa fa-google-plus fa-fw"></i></a>
+				<a href="<?php echo esc_url( get_the_author_meta( 'googleplus' ) ); ?>" title="Google+"><i class="fa fa-google-plus fa-fw"></i></a>
 			<?php } ?>
 		</p>
 		<div class="author-link">

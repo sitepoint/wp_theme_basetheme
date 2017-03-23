@@ -144,6 +144,10 @@ SitePoint Base includes the following awesomeness:
 - [Dosis](https://fonts.google.com/specimen/Dosis), which is licensed under SIL Open Font License 1.1
 
 
+Bundled screenshot image, Copyright AuthorName
+**License:** License Type ( example: CC0 1.0 Universal (CC0 1.0) )
+Source: https://sitepoint.com/
+
 == Changelog ==
 
 = 1.0 =
