@@ -357,7 +357,7 @@ gulp.task( 'browser-sync', function() {
  })
 
  gulp.task( 'build', ['clean', 'styles', 'vendorsCss', 'vendorsJs', 'customJS', 'images'],  function() {
-   return gulp.src(['./**', '!node_modules/**', '!gulpfile.js', '!package.json'])
+   return gulp.src(['./**', '!node_modules/**', '!./node_modules', '!gulpfile.js', '!package.json', '!docker-compose.yml'])
     .pipe(zip(themeFolder+'.zip'))
     .pipe(gulp.dest(distFolder))
     .pipe(notify( { message: 'TASK: "Dist" Completed! 💯', onLast: true } ));
