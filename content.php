@@ -72,5 +72,7 @@
 				// If a user has filled out their description and this is a multi-author blog, show their bio
 				get_template_part( 'author-bio' );
 			} ?>
+
+		<div class="navigation"><p><?php posts_nav_link(); ?></p></div>
 		</footer> <!-- /.entry-meta -->
 	</article> <!-- /#post -->
