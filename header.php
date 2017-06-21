@@ -44,6 +44,7 @@
 		<header id="masthead" class="grid-container site-header" role="banner">
 			<div class="grid-40 tablet-grid-40 site-title">
 				<?php sitepointbase_the_custom_logo() ?>
+				<p class="site-description"><?php echo get_bloginfo( 'description' ); ?></p>
 			</div> <!-- /.grid-40.site-title -->
 
 			<div class="grid-60 tablet-grid-60">

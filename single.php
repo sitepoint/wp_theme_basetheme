@@ -24,7 +24,12 @@ get_header(); ?>
 					}
 					?>
 
-					<?php the_posts_pagination( 'nav-below' ); ?>
+					<?php
+					the_post_navigation( array(
+						'prev_text' => '<span aria-hidden="true" class="nav-subtitle">' . __( 'Previous post:', 'sitepoint-base' ) . '</span> <span class="nav-title">%title</span>',
+						'next_text' => '<span aria-hidden="true" class="nav-subtitle">' . __( 'Next post:', 'sitepoint-base' ) . '</span> <span class="nav-title">%title</span>',
+					) );
+					?>
 
 				<?php endwhile; // end of the loop. ?>
 

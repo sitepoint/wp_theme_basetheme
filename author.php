@@ -42,8 +42,6 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 
-				<?php the_posts_pagination( 'nav-below' ); ?>
-
 			<?php else : ?>
 
 				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>

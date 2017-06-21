@@ -13,7 +13,7 @@
 	</div> <!-- /.author-avatar -->
 	<div class="author-description">
 		<h2><?php printf( esc_html__( 'About %s', 'sitepoint-base' ), get_the_author() ); ?></h2>
-		<p><?php echo wp_kses( get_the_author_meta( 'description' ) ); ?></p>
+		<p><?php echo wp_kses( get_the_author_meta( 'description' ), array() ); ?></p>
 		<p class="social-meta">
 			<?php if ( get_the_author_meta( 'url' ) ) { ?>
 				<a href="<?php echo esc_url( get_the_author_meta( 'url' ) ); ?>" title="Website"><i class="fa fa-link fa-fw"></i></a>

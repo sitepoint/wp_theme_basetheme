@@ -120,29 +120,6 @@ if ( ! function_exists( 'sitepointbase_setup' ) ) {
 			'header-text' => array( 'site-title', 'site-description' ),
 			) );
 
-		function sitepoint_base_register_theme_customizer( $wp_customize ) {
-				$wp_customize->add_setting(
-				    'custom_text_color',
-				    array(
-				        'default'     => '#000000',
-								'transport'   => 'postMessage'
-				    )
-				);
-
-				$wp_customize->add_control(
-					new WP_Customize_Color_Control(
-					$wp_customize,
-					'link_color',
-						array(
-							'label'      => __( 'Text Color', 'sitepoint-base' ),
-							'section'    => 'colors',
-							'settings'   => 'custom_text_color'
-						)
-					)
-				);
-			}
-		add_action( 'customize_register', 'sitepoint_base_register_theme_customizer' );
-
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
@@ -157,6 +134,29 @@ if ( ! function_exists( 'sitepointbase_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'sitepointbase_setup' );
 
+function sitepoint_base_register_theme_customizer( $wp_customize ) {
+		$wp_customize->add_setting(
+				'custom_text_color',
+				array(
+						'default'     => '#000000',
+						'transport'   => 'postMessage'
+				)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+			$wp_customize,
+			'link_color',
+				array(
+					'label'      => __( 'Text Color', 'sitepoint-base' ),
+					'section'    => 'colors',
+					'settings'   => 'custom_text_color'
+				)
+			)
+		);
+	}
+add_action( 'customize_register', 'sitepoint_base_register_theme_customizer' );
+
 function sitepoint_base_customizer_css() {
 		?>
 		<style type="text/css">
@@ -167,17 +167,15 @@ function sitepoint_base_customizer_css() {
 				h4,
 				h5,
 				h6,
-				a,
 			  p,
-				a:visited,
 				.header-meta a:visited,
 				.smallprint a:visited,
 				.site-content,
 				.fa,
-				.post-categories a,
 				.site-title a,
-				.main-navigation a,
-				.main-navigation .current-menu-item > a { color: <?php echo get_theme_mod( 'custom_text_color' ); ?>; }
+				.main-navigation a { color: <?php echo get_theme_mod( 'custom_text_color' ); ?>;
+			}
+			.post-categories a { background: <?php echo get_theme_mod( 'custom_text_color' ); ?>;
 		</style>
 		<?php
 }
@@ -434,7 +432,7 @@ if ( ! function_exists( 'sitepointbase_the_custom_logo' ) ) {
 	function sitepointbase_the_custom_logo() {
 		$siteTitleStr = "";
 
-		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+		if ( has_custom_logo() ) {
 			the_custom_logo();
 		}
 		else {
