@@ -16,13 +16,14 @@
 		<header class="entry-header">
 			<?php if ( is_single() ) { ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<?php sitepointbase_posted_on(); ?>
 			<?php }
 			else { ?>
 				<h1 class="entry-title">
 					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h1>
 			<?php } // is_single() ?>
-			<?php sitepointbase_posted_on(); ?>
+
 			<?php if ( has_post_thumbnail() && !is_search() ) {
 				if ( is_single() ) {
 					the_post_thumbnail( 'sitepoint_base_theme_post_feature_full_width' );
