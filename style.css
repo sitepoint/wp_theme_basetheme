@@ -2143,7 +2143,11 @@ h1.page-title {
 	.main-small-navigation .nav-menu, .nav-menu ul {
 		padding: 0;
 	}
-	.main-small-navigation .nav-menu ul {
+	.small-navigation ul.children {
+		padding-left: 75rem;
+		padding-left: 12px;
+	}
+	.main-small-navigation .nav-menu ul.children {
 		padding-left: 16px;
 		padding-left: 1rem;
 	}
@@ -2158,6 +2162,10 @@ h1.page-title {
 	.nav-menu,
 	.nav-menu ul {
 		padding: 0;
+	}
+	.main-small-navigation .nav-menu ul.children {
+		padding-left: 75rem;
+		padding-left: 12px;
 	}
 	.main-small-navigation,
 	.main-navigation li {
@@ -2267,4 +2275,5 @@ h1.page-title {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+	.nav-menu, .widget-area, .comments-area { display: none; }
 }
