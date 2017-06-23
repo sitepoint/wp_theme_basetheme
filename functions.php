@@ -139,7 +139,8 @@ function sitepoint_base_register_theme_customizer( $wp_customize ) {
 				'custom_text_color',
 				array(
 						'default'     => '#000000',
-						'transport'   => 'postMessage'
+						'transport'   => 'postMessage',
+						'sanitize_callback' => 'sanitize_hex_color'
 				)
 		);
 
