@@ -7,7 +7,7 @@ Description: Used to style the TinyMCE editor.
    Font Awesome icon font. http://gregoryloucas.github.com/Font-Awesome-More
    ========================================================================== */
 
-@import "css/font-awesome.min.css";
+@import "css/vendor/font-awesome.css";
 
 
 /* ==========================================================================
