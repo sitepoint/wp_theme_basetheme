@@ -225,41 +225,44 @@ Lastly, update the stylesheet header in style.css and either update or delete th
 License
 -------
 
-SitePoint is licensed under the [GNU General Public License version
-2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+SitePoint Base theme is licensed under the [GNU General Public License
+version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or (at
 your option) any later version.
 
+SitePoint Base theme bundles part or all of the following third-party
+resources:
 
-Credits
--------
+Unsemantic v1.1.1, Copyright 2013-2016 Nathan Smith  
+Licenses: GPL/MIT  
+Source: http://unsemantic.com
 
-SitePoint Base is packed full of the following wholesome goodness:
+Modernizr v3.5.0, Copyright 2017 Faruk Ates, Paul Irish, Alex Sexton,
+  Ryan Seddon, Patrick Kettner, Stu Cox and Richard Herrera  
+License: MIT  
+Source: http://modernizr.com
 
-- [Unsemantic](http://unsemantic.com), which is licensed under GPL and
-  MIT license
-- [Modernizr](http://modernizr.com), which is licensed under the MIT
-  license
-- [Normalize.css](https://github.com/necolas/normalize.css), which is
-  licensed under the MIT license
-- [jQuery
-  Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation)
-  which is dual licensed under the MIT license and GPL licenses
+Normalize.css v4.1.1, Copyright 2011-2016 Nicolas Gallagher and
+  Jonathan Neal  
+License: MIT license  
+Source: https://github.com/necolas/normalize.css
 
+Font Awesome v4.6.3, Copyright 2016 Dave Gandy  
+Licenses: SIL Open Font License and MIT License  
+Source: http://fortawesome.github.io/Font-Awesome
 
+_s (small-menu.js), Copyright 2012 Automattic Inc.*  
+Licenses: GPLv2 or later  
+Source: https://github.com/Automattic/_s/commit/4f3d984c7ca1af19cf3cfe6561f0356e97ace505
 
-SitePoint Base includes the following awesomeness:
+Responsive menu v1.1.4, Copyright 2014-2016 Robin Poort*  
+Licenses: MIT  
+Source: https://github.com/robinpoort/vanilla-js-responsive-menu
 
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font,
-  which is licensed under SIL Open Font License and MIT License
-- [Open Sans font](https://fonts.google.com/specimen/Open+Sans), which
-  is licensed under Apache License Version 2.0
-- [Dosis](https://fonts.google.com/specimen/Dosis), which is licensed
-  under SIL Open Font License 1.1
-
+*Modified by SitePoint
 
 Changelog
 ---------
