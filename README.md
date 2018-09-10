@@ -1,15 +1,31 @@
 SitePoint Base
 ==============
 
-Contributors: ahortin
-Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
-Requires at least: 4.5
-Tested up to: 4.6
-Stable tag: 1.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: ahortin, the SitePoint team  
+Requires at least: 4.5  
+Tested up to: 4.6  
+Stable tag: 1.3  
+Theme URI: https://www.sitepoint.com/basetheme/  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+Tags: one-column, two-columns, right-sidebar, custom-background,
+  custom-header, custom-logo, custom-menu, editor-style,
+  featured-image-header, featured-images, full-width-template,
+  microformats, post-formats, sticky-post, theme-options,
+  threaded-comments, translation-ready  
+Source: https://sitepoint.com/  
 
-The SitePoint Base base theme is a clean, fast and simple platform for creating beautiful, responsive custom WordPress themes. It's a simple starter theme built on HTML5 & CSS3. At its core is a fluid, responsive grid based on percentages, making for a flexible layout. It incorporates a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font. The SitePoint Base base theme is WooCommerce compatible, Multilingual Ready (WPML) and translateable. It's also compatible with a wide range of popular page builders such as Visual Composer, Beaver Builder, Divi Builder, SiteOrigin Page Builder and the Elementor Page Builder.
+The SitePoint Base base theme is a clean, fast and simple platform for
+creating beautiful, responsive custom WordPress themes. It's a simple
+starter theme built on HTML5 & CSS3. At its core is a fluid,
+responsive grid based on percentages, making for a flexible layout. It
+incorporates a set of common templates, support for WordPress Post
+Formats and the gorgeous, retina friendly Font Awesome icon font.
+
+The SitePoint Base base theme is WooCommerce compatible, Multilingual
+Ready (WPML) and translateable. It's also compatible with a wide range
+of popular page builders such as Visual Composer, Beaver Builder, Divi
+Builder, SiteOrigin Page Builder and the Elementor Page Builder.
 
 
 Description
@@ -165,9 +181,6 @@ SitePoint Base includes the following awesomeness:
 - [Dosis](https://fonts.google.com/specimen/Dosis), which is licensed under SIL Open Font License 1.1
 
 
-Bundled screenshot image, Copyright AuthorName
-**License:** License Type ( example: CC0 1.0 Universal (CC0 1.0) )
-Source: https://sitepoint.com/
 
 Changelog
 ---------
