@@ -185,6 +185,12 @@ SitePoint Base includes the following awesomeness:
 Changelog
 ---------
 
+### 1.3 ###
+- wp_kses and comment error fixed
+
+### 1.2 ###
+- Added indention for submenu in narrow screens
+
 ### 1.1 ###
 - Add post type templates
 - Update the pot file and remove old one
